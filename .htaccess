@@ -1,6 +1,25 @@
-# FASE DI PROVA: non indicizzare. Sostituire al passaggio di dominio.
-<IfModule mod_headers.c>
-Header set X-Robots-Tag "noindex, nofollow"
-</IfModule>
+# Pangea Studio - produzione
+Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404-nuovo.html
+RewriteEngine On
+# dominio senza www (HTTPS forzato da hPanel)
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://pangeastudio.it%{REQUEST_URI} [L,R=301,NE]
+# barra finale sugli URL di cartella
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME}/ -d
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType image/webp "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+</IfModule>
