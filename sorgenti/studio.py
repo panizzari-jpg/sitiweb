@@ -284,6 +284,84 @@ S.page("/fotografia/", "Fotografia di prodotto, vino e food | Pangea Studio",
        hero_img=("/photography/fotografia-vino-packaging-ballabio.webp", "Bottiglia Ballabio Farfalla Noir e astuccio"), ctas=ctas("Fotografia"), crumbs=[("Fotografia", "/fotografia/")],
        schema=[service("Fotografia di prodotto e food", "/fotografia/", "Still life di prodotto, vino, packaging e food.")])
 
+# ---------------- FASE 2: pagine ricostruite (stessi URL del sito precedente) ----------------
+def rq(servizio, rif):
+    return f'/contatti/?servizio={servizio.replace(" ", "+")}&riferimento={rif.replace(" ", "%20")}#richiesta'
+
+def ctas_rif(servizio, rif):
+    return f'<div class="ctas"><a class="btn b1" href="{rq(servizio, rif)}">Richiedi un preventivo</a><a class="btn b2" href="/portfolio/">Guarda i progetti</a></div>'
+
+def prep(title, items, lead=None):
+    return section(title, '<ul class="list">' + "".join(f"<li>{i}</li>" for i in items) + "</ul>", intro=lead)
+
+S.page("/fotografia-vino/", "Fotografia di vino e bottiglie | Pangea Studio",
+       "Fotografia di bottiglie, astucci e dettagli per cantine: immagini per sito, catalogo e comunicazione. Guarda il progetto Ballabio e richiedi un preventivo.",
+       "Fotografia di vino e bottiglie per cantine",
+       "Fotografiamo bottiglie, astucci e dettagli per cantine dell’Oltrepò Pavese, della provincia di Pavia e di tutta Italia, pensando a catalogo, sito e comunicazione.",
+       section("Bottiglia, etichetta e confezione", '<div class="cols2"><p>Vetro, riflessi e superfici lucide richiedono una luce controllata. Prima dello scatto scegliamo con te le inquadrature: il prodotto intero, la confezione, il dettaglio del marchio o una composizione.</p><p>Se i prodotti sono più di uno, concordiamo in anticipo inquadratura, sfondo e proporzioni, così la serie resta coerente nel catalogo e sul sito.</p></div>') +
+       section("Il riferimento: Ballabio", works([
+           dict(img="/photography/ballabio/packaging.webp", alt="Bottiglia Ballabio Farfalla Noir e confezione", tag="Foto originale", title="Ballabio · Farfalla Noir Collection", text="Bottiglia, astuccio chiuso, confezione aperta e dettagli del marchio: cinque immagini della serie.", href="/fotografia/#foto-ballabio", cta="Guarda le immagini Ballabio"),
+           dict(img="/photography/fotografia-dettaglio-marchio-ballabio.webp", alt="Dettaglio del marchio Ballabio sulla confezione, fotografia di Pangea Studio", tag="Foto originale", title="Il dettaglio del marchio", text="Il particolare che identifica il prodotto, ripreso da vicino."),
+       ]), alt=True) +
+       prep("Cosa serve per preparare il preventivo", ["Numero e tipo di bottiglie o confezioni da fotografare", "Dove useremo le immagini: sito, catalogo o campagna", "Riferimenti di stile, se ne hai", "Disponibilità dei prodotti e tempi desiderati"]) +
+       section("Quali immagini servono al tuo progetto?", '<p>Una foto su fondo neutro per la scheda prodotto e una composizione ambientata per una campagna sono lavori diversi. Stabiliamo prima i formati (orizzontale o verticale), i dettagli da mettere in evidenza e le destinazioni: così il preventivo distingue scatto, composizione, post-produzione ed eventuali applicazioni grafiche.</p><p>Per altri soggetti guarda anche la <a href="/fotografia-prodotti/">fotografia di prodotto</a> e la <a href="/fotografia-food-etika/">fotografia food</a>.</p>'),
+       hero_img=("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e confezione"), ctas=ctas_rif("Fotografia", "Fotografia di vino e bottiglie"),
+       crumbs=[("Fotografia", "/fotografia/"), ("Fotografia di vino", "/fotografia-vino/")],
+       schema=[service("Fotografia di vino e bottiglie", "/fotografia-vino/", "Fotografia di bottiglie, astucci e dettagli per cantine.")])
+
+S.page("/fotografia-food-etika/", "Fotografia food per A Tavola con Etika | Pangea Studio",
+       "Progetto di fotografia food e grafica per A Tavola con Etika: quattro immagini coordinate per la comunicazione e per un banner fieristico di grande formato.",
+       "A Tavola con Etika. Dal piatto alla comunicazione del marchio.",
+       "Un progetto di fotografia food per un marchio di prodotti alimentari, preparato per la comunicazione e per la presenza a MiVeg a Milano.",
+       section("Quattro piatti, una direzione visiva", '<p>Le immagini dovevano funzionare sia nella comunicazione del marchio sia come sfondo per un banner di fiera. Piatto nero e fondo scuro danno continuità alla serie; luce e inquadratura rendono leggibili consistenze e dettagli.</p>') +
+       section("Fotografia, selezione e applicazione grafica", works([
+           dict(img="/photography/etika/brasato.webp", alt="Piatto fotografato per A Tavola con Etika: preparazione in salsa", tag="Foto originale", title="Preparazione in salsa", text="Il piatto in primo piano su fondo scuro."),
+           dict(img="/photography/fotografia-food-cannoncini-a-tavola-con-etika.webp", alt="Cannoncini fotografati per A Tavola con Etika", tag="Foto originale", title="Cannoncini", text="Forma e consistenza in evidenza."),
+           dict(img="/photography/fotografia-food-medaglioni-a-tavola-con-etika.webp", alt="Medaglioni su piatto nero fotografati per A Tavola con Etika", tag="Foto originale", title="Medaglioni", text="Il piatto nero come filo conduttore della serie."),
+           dict(img="/photography/fotografia-food-crocchette-a-tavola-con-etika.webp", alt="Crocchette di riso con dettaglio del ripieno, A Tavola con Etika", tag="Foto originale", title="Crocchette", text="Il ripieno in evidenza."),
+       ]) + '<p style="margin-top:18px">Le immagini selezionate sono state inserite nel banner fieristico in formato 246 × 160 cm.</p>', alt=True) +
+       section("Una fotografia con una destinazione precisa", '<div class="cols2"><p>Il progetto collega il contenuto visivo al supporto finale: leggibilità del prodotto, composizione e spazio per marchio e testi si valutano insieme. Lo stesso metodo vale per siti, cataloghi e materiali promozionali.</p><p>Pangea Studio segue immagini e comunicazione digitale; <a href="https://www.pangeacomunicazione.it/">Pangea Comunicazione</a> supporta grafica e materiali stampati.</p></div>') +
+       section("Vuoi un lavoro simile?", '<p>Raccontaci prodotto e destinazione delle immagini. Vedi anche <a href="/fotografia-vino/">fotografia di vino e bottiglie</a> e <a href="/fotografia-prodotti/">fotografia di prodotto</a>.</p>'),
+       hero_img=("/photography/etika/brasato.webp", "Piatto fotografato per A Tavola con Etika"), ctas=ctas_rif("Fotografia", "A Tavola con Etika"),
+       crumbs=[("Fotografia", "/fotografia/"), ("Food · A Tavola con Etika", "/fotografia-food-etika/")],
+       schema=[service("Fotografia food", "/fotografia-food-etika/", "Fotografia food e applicazione grafica per la comunicazione di un marchio alimentare.")])
+
+S.page("/fotografia-prodotti/", "Fotografia di prodotto | Pangea Studio",
+       "Still life e fotografia di prodotto per siti, cataloghi e comunicazione aziendale: immagini, dettagli e packaging pensati per l’uso finale.",
+       "Fotografia di prodotto e still life",
+       "Immagini di prodotto, dettagli e packaging pensate per l’uso finale: scheda prodotto, home page, catalogo o campagna.",
+       section("Il prodotto e le informazioni che contano", '<p>Forma, finitura e dettagli aiutano chi guarda a capire cosa offri. Scegliamo con te le viste d’insieme e i particolari in base alle caratteristiche da mostrare.</p>') +
+       section("Immagini pensate per la destinazione", '<p>Una scheda prodotto, una home page e una pagina catalogo chiedono formati diversi. Formati e utilizzi si concordano prima degli scatti, tenendo distinti fotografia e applicazioni grafiche.</p>', alt=True) +
+       section("Fotografia, food ed elaborazione promozionale", works([
+           dict(img="/photography/fotografia-dettaglio-marchio-ballabio.webp", alt="Dettaglio del marchio sulla confezione Ballabio", tag="Foto originale", title="Ballabio · dettaglio di prodotto e packaging", text="Vino e packaging.", href="/fotografia-vino/", cta="Fotografia di vino"),
+           dict(img="/photography/fotografia-food-brasato-a-tavola-con-etika.webp", alt="Fotografia food per A Tavola con Etika", tag="Foto originale", title="A Tavola con Etika", text="Fotografia food coordinata con la grafica.", href="/fotografia-food-etika/", cta="Fotografia food"),
+       ])) +
+       prep("Cosa serve per preparare il preventivo", ["Prodotti e quantità: numero di referenze e di viste per ciascuna", "Materiali e dettagli da mettere in evidenza", "Formati (orizzontale o verticale) e utilizzi", "Tempi e riferimenti visivi"]),
+       hero_img=("/photography/fotografia-dettaglio-marchio-ballabio.webp", "Dettaglio del packaging Ballabio"), ctas=ctas_rif("Fotografia", "Fotografia di prodotto"),
+       crumbs=[("Fotografia", "/fotografia/"), ("Fotografia di prodotto", "/fotografia-prodotti/")],
+       schema=[service("Fotografia di prodotto e still life", "/fotografia-prodotti/", "Still life e fotografia di prodotto per siti, cataloghi e comunicazione.")])
+
+S.page("/portfolio/frutta-secca-distribuzione/", "Sito aziendale: Frutta Secca Distribuzione | Pangea Studio",
+       "Il progetto Frutta Secca Distribuzione nel portfolio Pangea Studio: presentazione aziendale, prodotti e contatti online, con link al sito.",
+       "Frutta Secca Distribuzione: presentare azienda e prodotti online.",
+       "Un sito aziendale che spiega l’offerta, mostra i prodotti e porta il visitatore a chiedere informazioni.",
+       section("Un obiettivo concreto: spiegare l’offerta", works([
+           dict(img="/portfolio/web-frutta-secca.webp", alt="Anteprima del progetto web Frutta Secca Distribuzione", title="Frutta Secca Distribuzione", text="Il sito deve aiutare chi arriva a capire cosa cerca e a trovare come chiedere informazioni.", href="https://www.fruttaseccadistribuzione.it/", cta="Esplora il sito del progetto"),
+       ])) +
+       section("Dal riferimento al tuo sito aziendale", '<div class="cols2"><p>Il percorso parte da servizi o prodotti, pubblico e materiali disponibili. Definiamo le pagine utili e i collegamenti verso la richiesta di contatto; se esiste già un sito, ne valutiamo i contenuti prima di decidere cosa conservare.</p><div><h3>Cosa inviarci</h3><ul class="list"><li>Indirizzo del sito attuale</li><li>Prodotti o servizi prioritari</li><li>Logo, testi e foto</li><li>Funzioni richieste e scadenze</li></ul></div></div>', alt=True) +
+       '<section class="band"><div class="wrap"><p><a href="/siti-web/">Realizzazione e restyling siti web →</a> · <a href="/portfolio/">Torna ai progetti →</a></p></div></section>',
+       hero_img=("/portfolio/web-frutta-secca.webp", "Progetto web Frutta Secca Distribuzione dal portfolio Pangea Studio"), ctas=ctas_rif("Siti web", "Frutta Secca Distribuzione"),
+       crumbs=[("Portfolio", "/portfolio/"), ("Frutta Secca Distribuzione", "/portfolio/frutta-secca-distribuzione/")])
+
+S.page("/portfolio/insegne-in-legno/", "Sito con catalogo e lavori: Insegne in Legno | Pangea Studio",
+       "Il progetto Insegne in Legno nel portfolio Pangea Studio: materiali, lavori, foto, video e percorsi verso la richiesta di preventivo.",
+       "Insegne in Legno: dai materiali alle realizzazioni.",
+       "Un sito con catalogo e lavori: legno, plexiglass, alluminio e PVC/Forex come punti di ingresso, con le realizzazioni collegate.",
+       section("Il servizio prende forma nei lavori", '<p>Ogni materiale ha una pagina che ne spiega le possibilità e mostra i lavori collegati, con una scheda per ciascun progetto. Il visitatore può partire da un materiale o da un’insegna finita, e il nome del progetto accompagna la richiesta di preventivo.</p><h3>Un percorso leggibile</h3>' + steps([("Scegli", "un materiale o un tipo di insegna."), ("Guarda", "foto e dettagli."), ("Apri", "la scheda del progetto."), ("Invia", "logo, misure e un riferimento.")]) + '<p style="margin-top:18px"><a href="https://insegneinlegno.com/">Esplora Insegne in Legno ↗</a> · <a href="https://insegneinlegno.com/insegne-in-legno/">Guarda la pagina dedicata al legno ↗</a></p>') +
+       section("Come applicarlo alla tua attività", '<div class="cols2"><p>Un catalogo di servizi funziona meglio quando ogni pagina offre una prova concreta: un procedimento, un progetto, un prodotto. Creiamo pagine separate solo quando ci sono informazioni e materiale sufficienti a sostenerle.</p><p><a href="/siti-web/">Progettazione di siti web →</a><br><a href="/seo/">Struttura, contenuti e SEO →</a><br><a href="/portfolio/">Torna al portfolio →</a></p></div>', alt=True),
+       ctas=ctas_rif("Siti web", "Insegne in Legno"),
+       crumbs=[("Portfolio", "/portfolio/"), ("Insegne in Legno", "/portfolio/insegne-in-legno/")])
+
 # ---------------- PORTFOLIO ----------------
 S.page("/portfolio/", "Portfolio siti web e fotografia | Pangea Studio",
        "Siti web realizzati da Pangea Studio per cantine, ristoranti, agriturismi, industria ed edilizia, con link ai siti online, e progetti fotografici.",
