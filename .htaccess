@@ -1,6 +1,44 @@
-# FASE DI PROVA: non indicizzare. Sostituire al passaggio di dominio.
-<IfModule mod_headers.c>
-Header set X-Robots-Tag "noindex, nofollow"
-</IfModule>
+# Generato per Hostinger (Apache/LiteSpeed)
+Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404-nuovo.html
+RewriteEngine On
+# HTTPS e dominio senza www
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://progettilaser.it%{REQUEST_URI} [L,R=301,NE]
+# Barra finale sugli URL di cartella (come il sito attuale)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME}/ -d
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+# Unire queste regole al .htaccess esistente dell'export, senza sovrascriverlo.
+# Se Hostinger ha 'Forza HTTPS' attivo in hPanel, togliere la condizione HTTPS e tenere solo www -> senza www.
+# Redirect 301 uno-a-uno: aggiungere qui eventuali URL dismessi
+# Redirect 301 /vecchio-url/ /nuovo-url/
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType image/webp "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+# Vecchie pagine /video/*: i filmati non sono nel nuovo sito, reindirizzo alla pagina di categoria
+Redirect 301 /video/ristorazione-accoglienza/ https://progettilaser.it/ristorazione-accoglienza/
+Redirect 301 /video/cassette-legno-personalizzate/ https://progettilaser.it/cassette-legno-personalizzate/
+Redirect 301 /video/taglieri-personalizzati/ https://progettilaser.it/taglieri-personalizzati/
+Redirect 301 /video/nomi-regali-personalizzati/ https://progettilaser.it/nomi-regali-personalizzati/
+Redirect 301 /video/sagome-decorazioni-legno/ https://progettilaser.it/sagome-decorazioni-legno/
+Redirect 301 /video/premi-personalizzati/ https://progettilaser.it/premi-personalizzati/
+Redirect 301 /video/confezioni-natale-aziende/ https://progettilaser.it/confezioni-natale-aziende/
+Redirect 301 /video/ardesia-personalizzata/ https://progettilaser.it/ardesia-personalizzata/
+Redirect 301 /video/incisione-vetro-personalizzata/ https://progettilaser.it/incisione-vetro-personalizzata/
+Redirect 301 /video/targhe-pannelli-legno/ https://progettilaser.it/targhe-pannelli-legno/
+Redirect 301 /video/gadget-aziendali-personalizzati/ https://progettilaser.it/gadget-aziendali-personalizzati/
+Redirect 301 /video/cerimonie-matrimoni-personalizzati/ https://progettilaser.it/cerimonie-matrimoni-personalizzati/
+Redirect 301 /video/targhette-industriali-laser/ https://progettilaser.it/targhette-industriali-laser/
