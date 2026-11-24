@@ -2,6 +2,7 @@
 Testi sobri, basati solo su ciò che è noto dal sito (slug, foto, pagine esistenti): niente dati inventati.
 I /video/* non hanno i filmati nel repository: sono reindirizzati (301) alla pagina di categoria."""
 from core import *
+from seo_lavori import SEO_LAVORI
 
 I = "/images/"
 
@@ -30,24 +31,24 @@ CATS = {
 WORKS = {
  "il-ceppo": ("Trattoria Il Ceppo", "qr-code-tavolo-legno", "qr-code-tavolo-legno-trattoria-il-ceppo.webp", "Supporti da tavolo in legno con QR code e logo Trattoria Il Ceppo", "Supporti da tavolo in legno con QR code del menu e logo del locale, incisi al laser."),
  "italiano": ("Italiano", "segnaposto-numeri-tavolo-legno", "cubi-segnatavolo-legno-qr-italiano.webp", "Cubi segnatavolo in legno con numero, logo e QR code per il locale Italiano", "Cubi segnatavolo in legno con numero, logo e QR code sulle diverse facce."),
- "cunsorsi": ("Cunsorsi", None, None, "", "Lavoro di personalizzazione laser realizzato per Cunsorsi nel laboratorio Progetti Laser."),
+ "cunsorsi": ("Cunsorsi", "segnaposto-numeri-tavolo-legno", None, "", "Lavoro di personalizzazione laser realizzato per Cunsorsi nel laboratorio Progetti Laser."),
  "ottavio": ("Ottavio", "confezioni-natale-aziende", "cassetta-vino-legno-incisa-ottavio.webp", "Cassette in legno per vino Ottavio Provincia di Pavia IGT incise al laser", "Confezioni vino in legno con il marchio inciso al laser."),
- "vitea": ("Vitea", None, None, "", "Lavoro di personalizzazione laser realizzato per Vitea nel laboratorio Progetti Laser."),
+ "vitea": ("Vitea", "targhe-pannelli-legno", None, "", "Lavoro di personalizzazione laser realizzato per Vitea nel laboratorio Progetti Laser."),
  "casaia": ("La Casaia", "banco-punto-vendita", "taglieri-legno-personalizzati-logo-casaia.webp", "Taglieri in legno personalizzati con il logo La Casaia", "Taglieri in legno con il logo La Casaia inciso al laser."),
  "sparkling-world": ("Sparkling World / Stifel", "stopper-espositori-legno", "cassetta-legno-incisa-sparkling-world-stifel.webp", "Cassetta in legno per bottiglia incisa al laser con logo Sparkling World", "Cassetta in legno per bottiglia con logo inciso."),
- "giulia-matteo": ("Giulia e Matteo", "cerimonie-matrimoni-personalizzati", None, "", "Lavoro in legno realizzato al laser per Giulia e Matteo."),
- "vorwerk": ("Vorwerk", None, None, "", "Personalizzazione laser realizzata per Vorwerk nel laboratorio Progetti Laser."),
- "gualco": ("Distilleria Gualco", None, None, "", "Personalizzazione laser realizzata per la Distilleria Gualco."),
- "val-tidone": ("Val Tidone", None, None, "", "Personalizzazione laser realizzata per Val Tidone."),
- "chiesa": ("Chiesa", None, None, "", "Lavoro in legno realizzato al laser."),
+ "giulia-matteo": ("Giulia e Matteo", "incisione-coperchi-legno-conto-terzi", None, "", "Lavoro in legno realizzato al laser per Giulia e Matteo."),
+ "vorwerk": ("Vorwerk", "gadget-aziendali-personalizzati", None, "", "Personalizzazione laser realizzata per Vorwerk nel laboratorio Progetti Laser."),
+ "gualco": ("Distilleria Gualco", "incisione-coperchi-legno-conto-terzi", None, "", "Personalizzazione laser realizzata per la Distilleria Gualco."),
+ "val-tidone": ("Val Tidone", "incisione-coperchi-legno-conto-terzi", None, "", "Personalizzazione laser realizzata per Val Tidone."),
+ "chiesa": ("Chiesa", "sagome-decorazioni-legno", None, "", "Lavoro in legno realizzato al laser."),
  "tonalini-ardesia": ("Tonalini in ardesia", "ardesia-personalizzata", None, "", "Lavoro in ardesia con incisione laser."),
  "sottobicchieri-ardesia-vintage": ("The Resto Vintage", "ardesia-personalizzata", "sottobicchieri-ardesia-incisi-laser-resto-vintage.webp", "Sottobicchieri quadrati in ardesia incisi al laser con il logo di The Resto Vintage", "Sottobicchieri quadrati in ardesia con il logo del locale, incisi al laser."),
- "bosco-longhino": ("Bosco Longhino", None, None, "", "Personalizzazione laser realizzata per Bosco Longhino."),
+ "bosco-longhino": ("Bosco Longhino", "confezioni-natale-aziende", None, "", "Personalizzazione laser realizzata per Bosco Longhino."),
  "bottiglia-vetro-incisa": ("Bottiglia in vetro incisa", "incisione-vetro-personalizzata", "bottiglia-vetro-incisa-laser-vintage.webp", "Bottiglia in vetro con decorazione Vintage Design incisa al laser", "Bottiglia in vetro con decoro inciso al laser."),
- "vigne-di-misinto": ("Vigne di Misinto", None, None, "", "Personalizzazione laser realizzata per Vigne di Misinto."),
+ "vigne-di-misinto": ("Vigne di Misinto", "targhe-pannelli-legno", None, "", "Personalizzazione laser realizzata per Vigne di Misinto."),
  "nomi-porta-cameretta": ("Nomi per la porta della cameretta", "nomi-regali-personalizzati", None, "", "Nomi in legno tagliati al laser per la porta della cameretta."),
  "lettere-xmas": ("Lettere di Natale", "sagome-decorazioni-legno", None, "", "Lettere in legno tagliate al laser per le decorazioni natalizie."),
- "corte-del-lupo": ("Corte del Lupo", None, None, "", "Personalizzazione laser realizzata per Corte del Lupo."),
+ "corte-del-lupo": ("Corte del Lupo", "sagome-decorazioni-legno", None, "", "Personalizzazione laser realizzata per Corte del Lupo."),
  "carta-vini-legno": ("Carta dei vini in legno", "menu-portamenu-legno", None, "", "Carta dei vini in legno incisa al laser."),
  "stay-positive": ("Stay Positive", "premi-personalizzati", None, "", "Lavoro realizzato al laser."),
  "elisa-nome-sagomato": ("Nome sagomato Elisa", "nomi-regali-personalizzati", None, "", "Nome in legno sagomato al laser."),
@@ -75,6 +76,10 @@ WORKS = {
  "marcatura-bicolore-acciaio": ("Marcatura bicolore su acciaio", "marcatura-acciaio", "marcatura-laser-bicolore-acciaio-spazzolato.webp", "Marcatura laser bicolore su acciaio spazzolato", "Due tonalità su acciaio spazzolato."),
  "qr-code-marcatura-laser": ("QR code marcati al laser", "marcatura-laser-personalizzata", "marcatura-laser-qr-code-acciaio.webp", "QR code marcati al laser su lamiera di acciaio", "QR code marcati al laser su lamiera, per targhette e supporti."),
 }
+
+for _k,(_t,_d) in SEO_LAVORI.items():
+    _w=WORKS[_k]
+    WORKS[_k]=(_t.split(":")[0] if False else _t,_w[1],_w[2],_w[3],_d)
 
 ILLUSTRATIVE = {"qr-code-tavolo-legno-trattoria-il-ceppo.webp", "cubi-segnatavolo-legno-qr-italiano.webp", "cassetta-legno-incisa-sparkling-world-stifel.webp",
                 "cassetta-vino-legno-incisa-ottavio.webp", "taglieri-legno-personalizzati-logo-casaia.webp", "portachiavi-legno-personalizzati-anniversario.webp"}
@@ -127,7 +132,7 @@ def add_extra(S, ctas, service, P, D):
         rel_link = (f'<p>Questo lavoro fa parte della categoria <a href="/{cat}/">{cat_name(cat)}</a>.</p>' if cat else "")
         body = section("Il lavoro", f"<p>{testo}</p>{rel_link}<p>Hai un progetto simile? Chiedici un preventivo: partiamo da misure, materiale e file grafico e ti mandiamo una bozza prima di produrre.</p>")
         crumbs = [("Realizzazioni", "/realizzazioni/"), (titolo, f"/lavori/{slug}/")]
-        S.page(f"/lavori/{slug}/", f"{titolo} · lavoro laser | Progetti Laser", f"{titolo}: {testo}"[:158], titolo, testo, body,
+        S.page(f"/lavori/{slug}/", f"{titolo} | Progetti Laser", f"{testo} Guarda il lavoro e richiedi una personalizzazione per il tuo progetto."[:158], titolo, testo, body,
                hero_img=(I + img, alt) if img else None, ctas=ctas(cat_name(cat) if cat else "Generico"), crumbs=crumbs)
 
     # ----- Ballabio (fotografia, Pangea Studio) -----
