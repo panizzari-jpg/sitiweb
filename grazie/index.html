@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://pangeastudio.it/grazie/"><meta name="robots" content="noindex">
 <meta property="og:type" content="website"><meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Richiesta inviata · Pangea Studio"><meta property="og:description" content="Richiesta ricevuta.">
-<meta property="og:url" content="https://pangeastudio.it/grazie/"><meta property="og:image" content="https://pangeastudio.it/brand/logo-ufficiale-20261110.png">
+<meta property="og:url" content="https://pangeastudio.it/grazie/"><meta property="og:image" content="https://pangeastudio.it/photography/fotografia-vino-packaging-ballabio.webp">
 <link rel="icon" href="/brand/logo-ufficiale-20261110.png">
 <link rel="preload" href="/assets/fonts-pangeastudio/schibsted-grotesk-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/pangeastudio-20261124.css">
@@ -17,12 +17,12 @@
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="/"><img src="/brand/logo-ufficiale-20261110.png" alt="Pangea Studio" height="40" width="113"></a>
+<a class="brand" href="/"><img src="/brand/logo-ufficiale-20261110.png" alt="Pangea Studio" height="36" width="233"></a>
 <nav class="nav" aria-label="Principale"><a href="/siti-web/">Siti web</a><a href="/siti-web-cantine/">Cantine</a><a href="/siti-web-ristoranti/">Ristoranti</a><a href="/social-media/">Social</a><a href="/seo/">SEO</a><a href="/portfolio/">Portfolio</a><a href="/metodo/">Metodo</a><a class="btn b1" href="/contatti/">Raccontaci il progetto</a></nav>
 <details class="menu"><summary aria-label="Menu principale">Menu</summary><nav class="drop" aria-label="Menu mobile"><a href="/siti-web/">Siti web</a><a href="/siti-web-cantine/">Cantine</a><a href="/siti-web-ristoranti/">Ristoranti</a><a href="/social-media/">Social</a><a href="/seo/">SEO</a><a href="/portfolio/">Portfolio</a><a href="/metodo/">Metodo</a><a href="/contatti/">Raccontaci il progetto</a></nav></details>
 </div></header>
 <main id="main">
-<section class="hero solo"><div class="wrap"><div class="htxt"><h1>Grazie, abbiamo ricevuto la richiesta</h1><p class="lead">Ti ricontattiamo per capire meglio il progetto. Nel frattempo puoi guardare i lavori del portfolio.</p><div class="ctas"><a class="btn b1" href="/portfolio/">Vai al portfolio</a></div></div></div></section>
+<section class="hero photo"><img class="bgimg" src="/photography/fotografia-vino-packaging-ballabio.webp" alt="Fotografia di packaging Pangea Studio" fetchpriority="high" decoding="async" width="1600" height="1000"><div class="wrap"><div class="htxt"><h1>Grazie, abbiamo ricevuto la richiesta</h1><p class="lead">Ti ricontattiamo per capire meglio il progetto. Nel frattempo puoi guardare i lavori del portfolio.</p><div class="ctas"><a class="btn b1" href="/portfolio/">Vai al portfolio</a></div></div></div></section>
 
 <section class="ctaband band"><div class="wrap"><div><h2>Raccontaci cosa vuoi migliorare</h2>
 <p>Bastano l’indirizzo del sito attuale (se c’è), i servizi su cui puntare e la zona in cui lavori. Ti rispondiamo con le attività da fare e un preventivo su misura.</p>
@@ -39,6 +39,7 @@
 <script>{
 for(const b of document.querySelectorAll('.brand img')){const h=()=>b.style.display='none';if(b.complete&&!b.naturalWidth)h();b.addEventListener('error',h)}
 for(const p of document.querySelectorAll('.ph img')){const f=()=>p.parentNode.classList.add('noimg');if(p.complete&&!p.naturalWidth)f();p.addEventListener('error',f)}
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('main .band .wrap>*:not(h2), .card, .work, .steps li').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
 const live=/(^|\.)(progettilaser\.it|pangeastudio\.it)$/.test(location.hostname);
 for(const fm of document.querySelectorAll('form.f')){
  const q=new URLSearchParams(location.search),s=fm.querySelector('[data-pre]');

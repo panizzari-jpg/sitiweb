@@ -17,7 +17,7 @@
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="/"><img src="/brand/logo-ufficiale-20261110.png" alt="Pangea Studio" height="40" width="113"></a>
+<a class="brand" href="/"><img src="/brand/logo-ufficiale-20261110.png" alt="Pangea Studio" height="36" width="233"></a>
 <nav class="nav" aria-label="Principale"><a href="/siti-web/">Siti web</a><a href="/siti-web-cantine/">Cantine</a><a href="/siti-web-ristoranti/" aria-current=page>Ristoranti</a><a href="/social-media/">Social</a><a href="/seo/">SEO</a><a href="/portfolio/">Portfolio</a><a href="/metodo/">Metodo</a><a class="btn b1" href="/contatti/">Raccontaci il progetto</a></nav>
 <details class="menu"><summary aria-label="Menu principale">Menu</summary><nav class="drop" aria-label="Menu mobile"><a href="/siti-web/">Siti web</a><a href="/siti-web-cantine/">Cantine</a><a href="/siti-web-ristoranti/">Ristoranti</a><a href="/social-media/">Social</a><a href="/seo/">SEO</a><a href="/portfolio/">Portfolio</a><a href="/metodo/">Metodo</a><a href="/contatti/">Raccontaci il progetto</a></nav></details>
 </div></header>
@@ -39,6 +39,7 @@
 <script>{
 for(const b of document.querySelectorAll('.brand img')){const h=()=>b.style.display='none';if(b.complete&&!b.naturalWidth)h();b.addEventListener('error',h)}
 for(const p of document.querySelectorAll('.ph img')){const f=()=>p.parentNode.classList.add('noimg');if(p.complete&&!p.naturalWidth)f();p.addEventListener('error',f)}
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('main .band .wrap>*:not(h2), .card, .work, .steps li').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
 const live=/(^|\.)(progettilaser\.it|pangeastudio\.it)$/.test(location.hostname);
 for(const fm of document.querySelectorAll('form.f')){
  const q=new URLSearchParams(location.search),s=fm.querySelector('[data-pre]');
