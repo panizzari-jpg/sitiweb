@@ -126,6 +126,7 @@ S.page("/", "Siti web, restyling e campagne social in Oltrepò | Pangea Studio",
        "Siti web, restyling e campagne social per aziende, cantine e ristoranti dell’Oltrepò Pavese e della provincia di Pavia. 18 siti del portfolio da visitare.",
        "Siti web, restyling e campagne social per aziende, cantine e ristoranti dell’Oltrepò",
        "Siamo lo studio digitale di Pangea Comunicazione a Santa Maria della Versa (PV). Progettiamo e rifacciamo siti che spiegano bene cosa fai e portano richieste, li sosteniamo con campagne social mirate e SEO e, se serve, realizziamo le fotografie.",
+       section("Un sito che lavora per te", '<div class="cols2"><p>Molte attività hanno un sito che non porta richieste: bello da vedere, ma difficile da trovare su Google e poco chiaro su cosa offre, dove e a chi. Il nostro lavoro parte da lì. Prima capiamo cosa vendi, a chi e in quale zona; poi costruiamo pagine che rispondono alle domande reali dei clienti e li portano a chiamarti, scriverti o chiedere un preventivo.</p><p>Il sito è il centro, ma non basta da solo. Lo colleghiamo a campagne social mirate su Facebook e Instagram, che portano le persone alle pagine giuste, e a un lavoro SEO misurato con Search Console. Quando servono immagini vere di prodotti, bottiglie o piatti, le realizziamo nel nostro studio fotografico.</p><p>Siamo in Oltrepò Pavese dal 2004 come Pangea Comunicazione: conosciamo cantine, ristoranti e aziende del territorio.</p></div>') +
        section("Servizi", cards([
            ("Siti web e restyling", "Siti aziendali, cataloghi e restyling che conservano le pagine già visibili su Google.", "/siti-web/"),
            ("Campagne social", "Piano editoriale, post, caroselli e campagne Facebook e Instagram che portano alle pagine giuste del sito.", "/social-media/"),
@@ -144,7 +145,7 @@ S.page("/", "Siti web, restyling e campagne social in Oltrepò | Pangea Studio",
            ("Verifica e crescita", "Controlli prima della messa online, poi dati di Search Console per decidere i passi successivi."),
        ]) + '<p style="margin-top:18px"><a href="/metodo/">Il metodo in sette passaggi →</a></p>', alt=True) +
        section("Domande frequenti", faq(h_faq)),
-       picture=HERO_SVG, ctas=ctas("Sito web"),
+       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"),
        proof='<p class="proof">18 siti del portfolio online da visitare: cantine, ristoranti, agriturismi, industria ed edilizia.</p>',
        schema=[faq_schema(h_faq)])
 
@@ -164,6 +165,7 @@ S.page("/siti-web/", "Siti web e restyling in provincia di Pavia | Pangea Studio
        "Siti aziendali, cataloghi e siti per artigiani, ristoranti e cantine. Restyling che conserva le pagine indicizzate. Pacchetti Essenziale, Business, Performance.",
        "Realizzazione siti web e restyling per aziende",
        "Siti aziendali e cataloghi, siti per artigiani e professionisti, ristoranti e cantine: progettati per far capire subito cosa offri e portare il visitatore a contattarti.",
+       section("Prima la struttura, poi la grafica", '<div class="cols2"><p>Un sito efficace nasce da una buona struttura: quali servizi meritano una pagina propria, quali domande deve trovare risolte chi arriva da Google, quale azione deve compiere alla fine. Per questo partiamo da un incontro sull’attività e sugli obiettivi, e solo dopo passiamo a grafica e testi.</p><p>Ogni pagina ha un titolo chiaro, testi specifici sul tuo lavoro, immagini reali e un contatto sempre raggiungibile da smartphone. Prima della pubblicazione controlliamo navigazione, moduli e collegamenti; dopo, verifichiamo in Search Console che Google legga correttamente le pagine.</p></div>') +
        section("Che sito ti serve", cards([
            ("Aziende e cataloghi online", "Catalogo prodotti, schede tecniche e contatto commerciale. Esempio: Frutta Secca Distribuzione."),
            ("Artigiani e professionisti", "Servizi, lavori reali, zona servita e richiesta di preventivo. Esempio: Insegne in Legno."),
@@ -173,7 +175,7 @@ S.page("/siti-web/", "Siti web e restyling in provincia di Pavia | Pangea Studio
        section("Restyling di un sito esistente", '<div class="two"><div><ul class="list"><li>Partiamo dagli URL attuali e dalle pagine che portano visite</li><li>Decidiamo quali pagine conservare e quali reindirizzare</li><li>Controlliamo navigazione e moduli prima del passaggio</li><li>Dopo la pubblicazione verifichiamo le pagine in Search Console</li></ul></div><div><p>Un rifacimento fatto male azzera la visibilità costruita negli anni. Per questo il lavoro SEO parte prima della grafica: lo trovi descritto nella pagina <a href="/seo/">SEO</a>.</p></div></div>', alt=True) +
        section("Pacchetti", pk) +
        section("Domande frequenti", faq(sw_faq), alt=True),
-       picture=HERO_SVG, ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
+       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
        schema=[service("Realizzazione siti web", "/siti-web/", "Siti aziendali, cataloghi e restyling con conservazione delle pagine indicizzate."), faq_schema(sw_faq)])
 
 # ---------------- CANTINE ----------------
@@ -186,6 +188,7 @@ S.page("/siti-web-cantine/", "Siti web per cantine in Oltrepò | Pangea Studio",
        "Siti per cantine: schede vini, territorio, visite, contatti per distributori e vendita online. Portfolio: Monterosso, Belcredi, Ca’ Montebello, Vigna Alta.",
        "Siti web per cantine e aziende vinicole",
        "Lavoriamo in Oltrepò Pavese, tra le cantine. Realizziamo siti con schede dei vini verificate, storia e territorio, visite e contatti per clienti e distributori, e, se serve, con le fotografie del nostro studio.",
+       section("Il sito come cantina aperta", '<div class="cols2"><p>Chi visita il sito di una cantina vuole capire chi siete, assaggiare il territorio attraverso le immagini e trovare in fretta i vini, le schede e il modo per contattarvi o venirvi a trovare. Un distributore cerca altre informazioni rispetto a un appassionato: per questo prevediamo percorsi distinti.</p><p>Abbiamo realizzato i siti di diverse cantine, da Cantine Monterosso a Belcredi Vini 1906, e conosciamo le esigenze tipiche: schede tecniche aggiornabili, versioni in lingua, visite e degustazioni, vendita online dove serve. Le fotografie di bottiglie e packaging possono essere realizzate nel nostro studio.</p></div>') +
        section("Cosa contiene un sito per cantina", cards([
            ("Schede dei vini", "Etichette, descrizioni e caratteristiche, verificate con la cantina prima della pubblicazione."),
            ("Storia e territorio", "Chi siete, dove sono le vigne, le referenze: il racconto che distingue la cantina."),
@@ -195,7 +198,7 @@ S.page("/siti-web-cantine/", "Siti web per cantine in Oltrepò | Pangea Studio",
        ])) +
        section("Cantine che hanno scelto Pangea Studio", pf_works(group="cantine"), alt=True) +
        section("Domande frequenti", faq(ca_faq)),
-       picture=ph(MS.format("cantinemonterosso.com"), "Anteprima del sito Cantine Monterosso, realizzato da Pangea Studio", "Sito reale"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
+       hero_img=("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e astuccio, fotografia Pangea Studio"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
        schema=[service("Siti web per cantine", "/siti-web-cantine/", "Siti con schede vini, visite, contatti per distributori e vendita online."), faq_schema(ca_faq)])
 
 # ---------------- RISTORANTI ----------------
@@ -208,6 +211,7 @@ S.page("/siti-web-ristoranti/", "Siti web per ristoranti e agriturismi | Pangea 
        "Siti per ristoranti e agriturismi: menu, orari, indicazioni e prenotazioni facili da smartphone. Esempi: Trattoria Il Ceppo, Casa Garello.",
        "Siti web per ristoranti, trattorie e agriturismi",
        "Chi cerca un ristorante lo fa dal telefono e vuole quattro cose: menu, orari, dove siete e come prenotare. Le mettiamo in primo piano e, se serve, fotografiamo piatti e locale.",
+       section("Pensato per chi cerca dal telefono", '<p class="lead2">Il sito di un ristorante si guarda quasi sempre dallo smartphone, spesso poco prima di decidere dove andare. Per questo mettiamo in primo piano menu, orari, posizione e prenotazione, con pagine leggere che si aprono subito. Il resto, la storia del locale, la cucina, gli eventi, viene dopo e serve a convincere chi è indeciso.</p>') +
        section("Cosa trovi nel sito", cards([
            ("Menu e proposte", "Sempre aggiornati e leggibili da smartphone."),
            ("Orari e indicazioni", "Indirizzo e indicazioni per arrivare, in evidenza."),
@@ -216,7 +220,7 @@ S.page("/siti-web-ristoranti/", "Siti web per ristoranti e agriturismi | Pangea 
        ])) +
        section("Locali e agriturismi online", pf_works(group="ospitalita"), alt=True) +
        section("Domande frequenti", faq(ri_faq)),
-       picture=ph(MS.format("trattoriailceppo.it"), "Anteprima del sito Trattoria Il Ceppo, realizzato da Pangea Studio", "Sito reale"), ctas=ctas("Sito per ristorante"), crumbs=[("Siti web", "/siti-web/"), ("Ristoranti", "/siti-web-ristoranti/")],
+       hero_img=("/photography/etika/brasato.webp", "Piatto fotografato per A Tavola con Etika"), ctas=ctas("Sito per ristorante"), crumbs=[("Siti web", "/siti-web/"), ("Ristoranti", "/siti-web-ristoranti/")],
        schema=[service("Siti web per ristoranti", "/siti-web-ristoranti/", "Siti con menu, orari, indicazioni e prenotazioni da smartphone."), faq_schema(ri_faq)])
 
 # ---------------- SEO ----------------
@@ -230,6 +234,7 @@ S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
        "Audit SEO con Search Console per attività in provincia di Pavia: indicizzazione, ricerche reali, SEO locale e interventi in ordine di priorità.",
        "Consulenza SEO per attività della provincia di Pavia",
        "Analizziamo come Google legge il tuo sito e quali pagine trovano i clienti, poi ti consegniamo una lista di interventi in ordine di priorità e i controlli da ripetere dopo ogni modifica.",
+       section("Perché la SEO locale conta", '<div class="cols2"><p>Per un’attività che lavora in una zona precisa, farsi trovare da chi cerca il servizio nelle vicinanze vale più di qualsiasi visita generica. Significa avere pagine chiare per ogni servizio, informazioni coerenti su sede e area servita, e un sito che Google riesce a leggere senza errori.</p><p>Non promettiamo posizioni: nessuno può farlo seriamente. Lavoriamo sui dati reali di Search Console, interveniamo sulle pagine che hanno già impressioni e misuriamo prima e dopo, così sai cosa ha funzionato.</p></div>') +
        section("Cosa controlliamo", steps([
            ("Indicizzazione e struttura", "Pagine leggibili da Google, risposte del server, sitemap, canonical e redirect; errori, duplicati e pagine importanti difficili da raggiungere."),
            ("Ricerche e contenuti", "Con Search Console: ricerche, impressioni e clic; titoli, testi e collegamenti interni rivisti su ciò che le persone cercano."),
@@ -239,7 +244,7 @@ S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
        ])) +
        section("Cosa ricevi", '<div class="two"><div><ul class="list"><li>Lista di interventi ordinata per priorità</li><li>Controlli da ripetere dopo le modifiche</li><li>Elenco delle attività da preventivare, sul sito attuale o su un nuovo progetto</li></ul></div><div><p>Lavoriamo per attività che servono una zona precisa: Oltrepò Pavese, Pavia e provincia. Per chi deve rifare il sito, l’audit è il primo passo per non perdere le visite già conquistate.</p><p><a href="/siti-web/">Restyling senza perdere visibilità →</a></p></div></div>', alt=True) +
        section("Domande frequenti", faq(seo_faq)),
-       picture=HERO_SVG, ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
+       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
        schema=[service("Consulenza SEO", "/seo/", "Audit di indicizzazione, Search Console, contenuti e SEO locale."), faq_schema(seo_faq)])
 
 # ---------------- SOCIAL ----------------
@@ -252,6 +257,7 @@ S.page("/social-media/", "Campagne social Facebook e Instagram | Pangea Studio",
        "Piano editoriale, post, caroselli, storie e campagne Facebook e Instagram collegati alle pagine del sito. Per aziende, cantine e ristoranti dell’Oltrepò Pavese.",
        "Campagne social mirate su Facebook e Instagram",
        "Contenuti costruiti su ciò che i tuoi clienti vogliono sapere, e collegati al sito: un prodotto rimanda alla sua scheda, un lavoro al portfolio, una promozione al modulo di contatto.",
+       section("Campagne che portano al sito", '<div class="cols2"><p>Pubblicare tanto non basta: un post funziona quando risponde a una domanda dei clienti e porta a una pagina dove trovare la risposta e il contatto. Per questo costruiamo il piano editoriale partendo dai servizi su cui vuoi lavorare e dalle pagine del sito che li spiegano.</p><p>Per le campagne a pagamento definiamo prima obiettivo e pagina di arrivo, poi il contenuto. Il budget pubblicitario è separato dalla gestione e lo decidi tu.</p></div>') +
        section("Cosa comprende", cards([
            ("Piano editoriale", "Temi, frequenza, canali e approvazioni, partendo da domande dei clienti e servizi prioritari."),
            ("Testi, immagini e formati", "Post, caroselli e storie preparati sui materiali disponibili."),
@@ -259,7 +265,7 @@ S.page("/social-media/", "Campagne social Facebook e Instagram | Pangea Studio",
            ("Collegamento al sito", "Ogni contenuto porta dove la persona trova la risposta e il contatto."),
        ])) +
        section("Domande frequenti", faq(so_faq), alt=True),
-       picture=HERO_SVG, ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
+       hero_img=("/portfolio/grafica-brochure-steel.webp", "Materiale di comunicazione Steel Acciai realizzato da Pangea"), ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
        schema=[service("Gestione social media", "/social-media/", "Piano editoriale, contenuti e campagne Facebook e Instagram."), faq_schema(so_faq)])
 
 # ---------------- FOTOGRAFIA ----------------
@@ -278,7 +284,7 @@ S.page("/fotografia/", "Fotografia di prodotto, vino e food | Pangea Studio",
            ("Fotografiamo i dettagli", "Luce, composizione e resa delle superfici su ogni soggetto."),
            ("Consegniamo le immagini", "Selezionate e preparate nei formati per stampa e digitale."),
        ]), alt=True),
-       picture=ph("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e astuccio", "Foto originale", True), ctas=ctas("Fotografia"), crumbs=[("Fotografia", "/fotografia/")],
+       hero_img=("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e astuccio"), ctas=ctas("Fotografia"), crumbs=[("Fotografia", "/fotografia/")],
        schema=[service("Fotografia di prodotto e food", "/fotografia/", "Still life di prodotto, vino, packaging e food.")])
 
 # ---------------- PORTFOLIO ----------------
@@ -288,7 +294,7 @@ S.page("/portfolio/", "Portfolio siti web e fotografia | Pangea Studio",
        section("Cantine ed e-commerce del vino", pf_works(group="cantine")) +
        section("Ristoranti e ospitalità", pf_works(group="ospitalita"), alt=True) +
        section("Aziende, industria e artigiani", pf_works(group="aziende")),
-       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"))
+       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"), hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"))
 
 # ---------------- METODO ----------------
 S.page("/metodo/", "Il metodo di lavoro | Pangea Studio",

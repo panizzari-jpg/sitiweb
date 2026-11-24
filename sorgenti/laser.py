@@ -98,6 +98,7 @@ S.page("/", "Incisione laser su legno, metallo e vetro | Progetti Laser",
        "Laboratorio laser in Oltrepò Pavese: targhette con matricola, marcatura acciaio, articoli per ristoranti e cantine, gadget aziendali e regali personalizzati.",
        "Incisione e marcatura laser su legno, metallo, vetro e ardesia",
        "Laboratorio a Santa Maria della Versa (PV), in Oltrepò Pavese. Personalizziamo targhette con matricola, utensili in acciaio, articoli per locali e cantine, gadget aziendali e regali: pezzo singolo o serie, con verifica del file prima della produzione.",
+       section("Un laboratorio, non un catalogo", '<div class="cols2"><p>Progetti Laser è il laboratorio di incisione e taglio laser di Pangea Comunicazione, in Oltrepò Pavese. Non vendiamo oggetti da catalogo con un logo appoggiato sopra: partiamo dal tuo pezzo, dal tuo marchio e dall’uso che ne farai, e scegliamo materiale, area e tipo di lavorazione per ottenere un risultato leggibile e durevole.</p><p>Lavoriamo sia il pezzo unico sia la serie, anche con dati diversi su ogni pezzo: matricole, numeri di tavolo, nomi dei destinatari. Prima di produrre controlliamo il file e ti mandiamo una bozza da approvare, così sai esattamente cosa riceverai.</p><p>Per aziende e locali questo significa un solo interlocutore anche per il resto della comunicazione: insegne con <a href="https://insegneinlegno.com/">Insegne in Legno</a>, stampa, adesivi e abbigliamento con <a href="https://www.pangeacomunicazione.it/">Pangea Comunicazione</a>, sito e social con <a href="https://pangeastudio.it/">Pangea Studio</a>.</p></div>') +
        section("Cosa ti serve?", cards([
            ("Targhette per macchinari", "Logo, modello, matricola, numero di serie e QR su plastica o metallo, con dati diversi per ogni pezzo.", "/targhette-industriali-laser/"),
            ("Marcatura su acciaio", "Coltelli e utensili con logo, nome o matricola: marcatura piena, a contorno o a due tonalità.", "/marcatura-acciaio/"),
@@ -119,7 +120,7 @@ S.page("/", "Incisione laser su legno, metallo e vetro | Progetti Laser",
            ("Approvi e produciamo", "Confermi bozza e testi definitivi, poi incidiamo, tagliamo o marchiamo i pezzi."),
        ]) + '<p style="margin-top:18px"><a href="/come-lavoriamo/">Il metodo completo e come preparare i file →</a></p>', alt=True) +
        section("Domande frequenti", faq(home_faq)),
-       picture=HERO_SVG, ctas=ctas("Generico"),
+       hero_img=(I+"casaia-incisione.webp", "Incisione laser su un tagliere in legno nel laboratorio Progetti Laser"), ctas=ctas("Generico"),
        proof='<p class="proof">Lavori per aziende, locali, cantine e privati: Genoface, Il Reuccio delle Porchette, Trattoria Il Ceppo, Sparkling World, Distilleria Gualco, FBC Casteggio 1898.</p>',
        schema=[faq_schema(home_faq)])
 
@@ -134,6 +135,7 @@ S.page("/targhette-industriali-laser/", "Targhette industriali con matricola al 
        "Targhette per macchinari incise al laser su plastica e metallo: logo, modello, matricola, numero di serie, codice e QR, con dati variabili per ogni pezzo.",
        "Targhette industriali incise al laser con matricola e dati variabili",
        "Per costruttori e officine che devono identificare macchinari e apparecchiature: incidiamo logo, modello, matricola, numero di serie, codici e QR su targhette in plastica o metallo, con dati diversi per ogni pezzo.",
+       section("Quando servono", '<div class="cols2"><p>Una targhetta identificativa accompagna la macchina per tutta la sua vita: in officina, durante l’assistenza, nei controlli. Deve restare leggibile e riportare dati corretti, pezzo per pezzo. Per questo lavoriamo partendo dal tuo elenco di matricole e da un layout approvato, e incidiamo invece di stampare.</p><p>È la soluzione tipica per costruttori di macchinari e apparecchiature, officine che producono piccole serie, aziende che devono identificare attrezzature o ricambi, e per chi vuole un QR che porti al manuale o all’assistenza.</p></div>') +
        section("Cosa possiamo incidere", '<div class="two"><div><ul class="list"><li>Logo e ragione sociale del costruttore</li><li>Modello, matricola e numero di serie</li><li>Codici prodotto e anno</li><li>QR code verso manuale, scheda o assistenza</li><li>Dati variabili diversi per ogni targhetta della serie</li></ul></div><div><p>Partiamo dal tuo layout o lo impaginiamo noi sulla base dei testi definitivi. Prima della produzione ricevi una bozza da approvare con i dati di un campione.</p><p class="note">Le informazioni normative vanno fornite dal cliente: l’incisione non sostituisce certificazioni o marcature obbligatorie.</p></div></div>') +
        section("Lavori realizzati", works([
            dict(img=I + "genoface-personalizzazione-serie.webp", alt="Genoface · targhette incise e tagliate per apparecchiature estetiche", tag="Foto originale", title="Genoface", text="Targhette incise e tagliate al laser per apparecchiature estetiche e industriali.", href="/lavori/genoface-personalizzazione-serie/"),
@@ -141,7 +143,7 @@ S.page("/targhette-industriali-laser/", "Targhette industriali con matricola al 
        ]), alt=True) +
        section("Cosa ci serve per il preventivo", '<ul class="list"><li>Misure della targhetta e posizione di eventuali fori</li><li>Materiale preferito (plastica o metallo) e ambiente di utilizzo</li><li>Testi fissi e file del logo</li><li>Elenco dei dati variabili e quantità</li></ul><p>Per marcature direttamente su componenti in acciaio vedi <a href="/marcatura-acciaio/">marcatura laser su acciaio</a>.</p>') +
        section("Domande frequenti", faq(t_faq), alt=True),
-       picture=ph(I+"genoface-personalizzazione-serie.webp","Genoface · targhette incise e tagliate al laser","Foto originale",True), ctas=ctas("Targhette industriali"), crumbs=[("Targhette industriali", "/targhette-industriali-laser/")],
+       hero_img=(I+"genoface-personalizzazione-serie.webp","Genoface · targhette incise e tagliate al laser"), ctas=ctas("Targhette industriali"), crumbs=[("Targhette industriali", "/targhette-industriali-laser/")],
        schema=[service("Targhette industriali incise al laser", "/targhette-industriali-laser/", "Targhette in plastica e metallo con matricola, numero di serie, codici e QR."), faq_schema(t_faq)])
 
 # ---------------- ACCIAIO ----------------
@@ -154,6 +156,7 @@ S.page("/marcatura-acciaio/", "Marcatura laser su acciaio e coltelli | Progetti 
        "Marcatura laser su acciaio: coltelli e utensili con logo, nome o matricola. Finitura piena, a contorno o bicolore. Preventivo da foto e misure.",
        "Marcatura laser su acciaio: coltelli, utensili e componenti",
        "Personalizziamo coltelli e utensili in acciaio con logo, nomi o numeri di serie, per aziende, macellerie, ristoranti e regali. Scegli tra marcatura piena, a contorno o a due tonalità.",
+       section("Il marchio su ciò che si usa ogni giorno", '<div class="cols2"><p>Un coltello o un utensile marcato con il logo resta in mano a chi lavora per anni: è un modo concreto di firmare la propria attrezzatura o di fare un regalo che non finisce in un cassetto. La marcatura laser lavora direttamente l’acciaio, senza adesivi o vernici che si consumano.</p><p>Ci rivolgiamo a macellerie, ristoranti e laboratori alimentari, coltellerie e rivenditori, aziende che regalano strumenti di lavoro personalizzati. Per pezzi in serie possiamo inserire anche nomi o numeri diversi su ogni pezzo.</p></div>') +
        section("Tre finiture", cards([
            ("Piena", "Riempie lettere e forme: il marchio si legge con decisione sulla lama o sul manico."),
            ("A contorno", "Traccia solo il profilo: l’acciaio resta visibile all’interno del marchio."),
@@ -165,7 +168,7 @@ S.page("/marcatura-acciaio/", "Marcatura laser su acciaio e coltelli | Progetti 
            dict(img=I + "reuccio-marcatura.webp", alt="Marcatura bicolore per Il Reuccio delle Porchette", tag="Immagine dell’archivio", title="Il Reuccio delle Porchette", text="Dal logo al numero di serie, in tre finiture.", href="/marcatura-laser-personalizzata/"),
        ]), alt=True) +
        section("Domande frequenti", faq(a_faq) + '<p style="margin-top:18px">Per targhette con matricola vedi <a href="/targhette-industriali-laser/">targhette industriali</a>.</p>'),
-       picture=ph(I+"post-logo-coltelli.webp","Coltelli in acciaio con marcatura piena e a contorno","Immagine del post",False), ctas=ctas("Marcatura acciaio"), crumbs=[("Marcatura acciaio", "/marcatura-acciaio/")],
+       hero_img=(I+"post-logo-coltelli.webp","Coltelli in acciaio con marcatura piena e a contorno"), ctas=ctas("Marcatura acciaio"), crumbs=[("Marcatura acciaio", "/marcatura-acciaio/")],
        schema=[service("Marcatura laser su acciaio", "/marcatura-acciaio/", "Marcatura di coltelli e utensili in acciaio con logo, nomi e numeri di serie."), faq_schema(a_faq)])
 
 # ---------------- RISTORAZIONE ----------------
@@ -178,6 +181,7 @@ S.page("/ristorazione-accoglienza/", "QR da tavolo, segnatavolo e menu in legno 
        "Articoli personalizzati al laser per ristoranti, bar e agriturismi: QR code da tavolo, segnatavolo, cubi numerati, menu, sottobicchieri in legno e ardesia.",
        "Articoli personalizzati per ristoranti, bar e agriturismi",
        "QR code da tavolo, segnatavolo, menu e sottobicchieri con il marchio del locale: oggetti che si usano ogni giorno in sala, realizzati in legno, acrilico o ardesia.",
+       section("Il marchio del locale, sui tavoli", '<div class="cols2"><p>Il cliente seduto al tavolo guarda il segnatavolo, scansiona il QR del menu, appoggia il bicchiere sul sottobicchiere. Sono oggetti piccoli ma visti da tutti, ogni giorno: se portano il marchio del locale e sono fatti bene, raccontano la cura dell’ambiente meglio di un volantino.</p><p>Li realizziamo in legno, acrilico o ardesia, scegliendo finitura e spessore in base all’uso e alla pulizia. Possiamo coordinarli con l’insegna, il menu stampato e il sito del locale, grazie alle altre attività del gruppo Pangea.</p></div>') +
        section("Cosa realizziamo per la sala", cards([
            ("QR code da tavolo", "Supporti che rimandano al menu digitale, con logo del locale.", "/qr-code-tavolo-legno/"),
            ("Segnatavolo e cubi numerati", "Numero, logo e QR sulle diverse facce, in versione verticale o a cubo.", "/segnaposto-numeri-tavolo-legno/"),
@@ -195,7 +199,7 @@ S.page("/ristorazione-accoglienza/", "QR da tavolo, segnatavolo e menu in legno 
            dict(img=I + "carta-vini-legno.webp", alt="Carta dei vini in legno con vigneti incisi e scritta WINE tagliata", tag="Ambientazione illustrativa", title="Carta dei vini in legno", text="Copertina con vigneti incisi e scritta tagliata.", href="/lavori/carta-vini-legno/"),
        ]), alt=True) +
        section("Domande frequenti", faq(r_faq)),
-       picture=ph(I+"ceppo-supporti-qr-editoriale.webp","Trattoria Il Ceppo · supporti QR da tavolo","Ambientazione illustrativa",False), ctas=ctas("Ristorazione e locali"), crumbs=[("Ristoranti e locali", "/ristorazione-accoglienza/")],
+       hero_img=(I+"ceppo-supporti-qr-editoriale.webp","Trattoria Il Ceppo · supporti QR da tavolo"), ctas=ctas("Ristorazione e locali"), crumbs=[("Ristoranti e locali", "/ristorazione-accoglienza/")],
        schema=[service("Articoli personalizzati al laser per la ristorazione", "/ristorazione-accoglienza/", "QR code da tavolo, segnatavolo, menu e sottobicchieri personalizzati."), faq_schema(r_faq)])
 
 # ---------------- CASSETTE ----------------
@@ -208,6 +212,7 @@ S.page("/cassette-legno-personalizzate/", "Cassette in legno per vino con logo |
        "Cassette e confezioni in legno per bottiglie incise al laser con marchio, testi o dediche per ogni destinatario. Per cantine, regali aziendali e Natale.",
        "Cassette in legno per vino incise con logo o dedica",
        "Per cantine, distillerie e aziende che regalano vino: incidiamo il marchio sulle cassette che hai già o progettiamo con te la confezione, con un testo uguale per tutta la serie o diverso per ogni destinatario.",
+       section("Il regalo che porta il nome della cantina", '<div class="cols2"><p>In Oltrepò la cassetta di legno è il modo più naturale di presentare una bottiglia importante: a un cliente, a un distributore, a Natale. Con il marchio inciso diventa parte dell’immagine della cantina; con una dedica per ogni destinatario diventa un regalo personale.</p><p>Incidiamo cassette, coperchi e confezioni con il logo uguale per tutta la serie o con testi diversi pezzo per pezzo, partendo da un elenco controllato insieme. Lavoriamo anche per distillerie e aziende che regalano vino ai propri clienti.</p></div>') +
        section("Due modi per partire", '<div class="two"><div><h3>Hai già le cassette</h3><p>Vedi anche <a href="/incisione-coperchi-legno-conto-terzi/">incisione di coperchi in legno conto terzi</a>. Inviaci foto, misure, quantità e materiale. Verifichiamo superficie, planarità e finitura, poi incidiamo logo, testi o grafica.</p></div><div><h3>Scegliamo insieme la confezione</h3><p>Partiamo dalle bottiglie o dagli oggetti da contenere e dalle loro misure, anche per confezioni verticali con manico.</p></div></div><p class="note">Un marchio molto dettagliato può richiedere una revisione del file per restare leggibile sul legno.</p>') +
        section("Lavori per cantine e aziende", works([
            dict(img=I + "sparkling-world-stifel-confezione-originale-editoriale-640.webp", alt="Sparkling World · confezione in legno con incisione fine", tag="Ambientazione illustrativa", title="Sparkling World / Stifel", text="Confezione con incisione laser fine.", href="/lavori/sparkling-world/"),
@@ -216,7 +221,7 @@ S.page("/cassette-legno-personalizzate/", "Cassette in legno per vino con logo |
            dict(img=I + "bosco-longhino.webp", alt="Boscolonghino · confezioni verticali in legno con manico", tag="Ambientazione illustrativa", title="Boscolonghino", text="Confezioni verticali con manico e nome inciso.", href="/lavori/bosco-longhino/"),
        ]) + '<p class="note" style="margin-top:14px">Le ambientazioni illustrative mostrano lavori eseguiti in un contesto ricostruito; la foto originale è nella pagina del lavoro.</p>', alt=True) +
        section("Domande frequenti", faq(c_faq) + '<p style="margin-top:18px">Etichette e adesivi per bottiglie: <a href="https://www.pangeacomunicazione.it/">Pangea Comunicazione</a>.</p>'),
-       picture=ph(I+"ottavio-confezioni-vino-editoriale.webp","Ottavio · confezioni vino in legno incise","Ambientazione illustrativa",False), ctas=ctas("Cassette in legno"), crumbs=[("Cassette in legno", "/cassette-legno-personalizzate/")],
+       hero_img=(I+"ottavio-confezioni-vino-editoriale.webp","Ottavio · confezioni vino in legno incise"), ctas=ctas("Cassette in legno"), crumbs=[("Cassette in legno", "/cassette-legno-personalizzate/")],
        schema=[service("Cassette in legno per vino personalizzate", "/cassette-legno-personalizzate/", "Incisione laser di marchi e dediche su cassette e confezioni in legno."), faq_schema(c_faq)])
 
 # ---------------- TAGLIERI ----------------
@@ -236,7 +241,7 @@ S.page("/taglieri-personalizzati/", "Taglieri in legno personalizzati | Progetti
            dict(img=I + "gruppo-casa-30-anni.webp", alt="Gruppo Casa · tavolette in legno incise per i 30 anni", tag="Ambientazione illustrativa", title="Gruppo Casa, 30 anni", text="Due tavolette con marchio e anniversario.", href="/lavori/gruppo-casa-30-anni/"),
        ]), alt=True) +
        section("Domande frequenti", faq(tg_faq)),
-       picture=ph(I+"casaia-incisione-640.webp","Casaia · tagliere durante l’incisione laser","Foto originale",True), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
+       hero_img=(I+"casaia-incisione-640.webp","Casaia · tagliere durante l’incisione laser"), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
        schema=[service("Taglieri personalizzati incisi al laser", "/taglieri-personalizzati/", "Incisione di logo e dediche su taglieri in legno."), faq_schema(tg_faq)])
 
 # ---------------- GADGET ----------------
@@ -249,6 +254,7 @@ S.page("/gadget-aziendali-personalizzati/", "Gadget aziendali personalizzati al 
        "Gadget aziendali incisi al laser: portachiavi in legno, taccuini e oggetti con logo per eventi, anniversari e clienti. Personalizzazioni in serie.",
        "Gadget aziendali personalizzati al laser",
        "Portachiavi in legno, taccuini e oggetti con il tuo logo per eventi, anniversari, fiere e omaggi ai clienti: personalizzazioni in serie, con taglio e incisione laser.",
+       section("Gadget che si tengono", '<div class="cols2"><p>Un gadget funziona quando chi lo riceve lo usa: un portachiavi in legno, un taccuino con la copertina incisa, un oggetto legato a una ricorrenza dell’azienda. L’incisione laser dà un aspetto più curato della stampa e resiste nel tempo.</p><p>Li prepariamo per anniversari, eventi, fiere e omaggi ai clienti, anche in serie con testi diversi. Ci servono il tipo di oggetto, la quantità e il logo definitivo; il resto lo verifichiamo insieme prima della produzione.</p></div>') +
        section("Idee realizzate", works([
            dict(img=I + "taccuino-bioenol.webp", alt="Bioenol · taccuino con spirale, fascia ed elastico blu e penna coordinata", tag="Foto originale", title="Taccuino Bioenol", text="Spirale, fascia ed elastico blu, con penna coordinata.", href="/lavori/taccuino-bioenol/"),
            dict(img=I + "taccuino-carnevale.webp", alt="Taccuino a spirale nera con copertina incisa a tema Carnevale", tag="Foto originale", title="Taccuino Carnevale", text="Copertina incisa con un disegno dedicato alla ricorrenza.", href="/lavori/taccuino-carnevale/"),
@@ -256,7 +262,7 @@ S.page("/gadget-aziendali-personalizzati/", "Gadget aziendali personalizzati al 
        ])) +
        section("Per il preventivo", '<ul class="list"><li>Foto o tipo di oggetto e quantità</li><li>Logo o testo definitivo</li><li>Misure del supporto e area lavorabile</li><li>Utilizzo previsto (evento, omaggio, anniversario)</li></ul><p>Per confezioni regalo vedi <a href="/cassette-legno-personalizzate/">cassette in legno</a>.</p>', alt=True) +
        section("Domande frequenti", faq(g_faq)),
-       picture=ph(I+"taccuino-bioenol.webp","Bioenol · taccuino personalizzato","Foto originale",True), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
+       hero_img=(I+"taccuino-bioenol.webp","Bioenol · taccuino personalizzato"), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
        schema=[service("Gadget aziendali personalizzati al laser", "/gadget-aziendali-personalizzati/", "Portachiavi, taccuini e oggetti con logo, in serie."), faq_schema(g_faq)])
 
 # ---------------- NOMI E REGALI ----------------
@@ -269,6 +275,7 @@ S.page("/nomi-regali-personalizzati/", "Nomi in legno e regali personalizzati | 
        "Nomi sagomati, targhe per cameretta, battesimi, regali per maestre e ricorrenze in legno e plexiglass, tagliati e incisi al laser in Oltrepò Pavese.",
        "Nomi in legno e regali personalizzati",
        "Nomi sagomati, targhe per la cameretta, battesimi, dediche per maestre e ricorrenze: tagliamo e incidiamo legno e plexiglass a partire dal nome e dall’idea che hai in mente.",
+       section("Un nome, una data, un ricordo", '<p class="lead2">Nascite, battesimi, matrimoni, compleanni, un grazie alle maestre: tagliamo e incidiamo il legno e il plexiglass partendo dal nome e dall’idea che hai in mente. Ti mandiamo una bozza con carattere e disposizione e, quando la approvi, realizziamo il pezzo. Ogni regalo qui sotto è stato fatto nel nostro laboratorio.</p>') +
        section("Regali che abbiamo realizzato", works([
            dict(img=I + "orsetto-nicol.webp", alt="Orsetto in legno con nome Nicol inciso sul cuore e fiocco rosa", tag="Foto originale", title="Nicol", text="Orsetto in legno con il nome inciso sul cuore.", href="/lavori/orsetto-nicol-legno/"),
            dict(img=I + "targhe-battesimo-legno.webp", alt="Due targhe quadrate in legno per battesimo con angeli e cuori", tag="Foto originale", title="Battesimo", text="Due targhe quadrate con angeli e cuori.", href="/lavori/targhe-battesimo-legno/"),
@@ -278,7 +285,7 @@ S.page("/nomi-regali-personalizzati/", "Nomi in legno e regali personalizzati | 
            dict(img=I + "aeroplano-legno.webp", alt="Biplano in legno montato a incastro", tag="Foto originale", title="Aeroplano", text="Biplano in legno assemblato a incastro.", href="/lavori/aeroplano-legno/"),
        ])) +
        section("Domande frequenti", faq(n_faq), alt=True),
-       picture=ph(I+"orsetto-nicol-editoriale.webp","Nicol · orsetto in legno con nome inciso","Ambientazione illustrativa",False), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
+       hero_img=(I+"orsetto-nicol-editoriale.webp","Nicol · orsetto in legno con nome inciso"), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
        schema=[service("Nomi e regali personalizzati al laser", "/nomi-regali-personalizzati/", "Nomi sagomati, targhe e regali in legno e plexiglass."), faq_schema(n_faq)])
 
 # ---------------- VETRO ----------------
@@ -293,7 +300,7 @@ S.page("/incisione-vetro-personalizzata/", "Incisione laser su vetro e bottiglie
        "Incidiamo marchi, dediche e decorazioni su bottiglie e oggetti in vetro, per regali e serie personalizzate. La leggibilità dipende dalla luce che attraversa il vetro e dalla posizione del decoro.",
        section("Come valutiamo un oggetto in vetro", '<div class="two"><div><ul class="list"><li>Forma dell’oggetto e area raggiungibile</li><li>Spessore e caratteristiche del vetro</li><li>Posizione del decoro rispetto alla luce</li><li>Dimensione minima dei testi</li></ul></div><div>' + works([dict(img=I + "bottiglia-vetro-incisa-ambientato.webp", alt="Bottiglia in vetro con chiusura meccanica e decorazione Vintage Design incisa", tag="Ambientazione illustrativa", title="Bottiglia Vintage Design", text="Scritte e motivi ornamentali su bottiglia con tappo meccanico.", href="/lavori/bottiglia-vetro-incisa/")]) + '</div></div>') +
        section("Domande frequenti", faq(v_faq), alt=True),
-       picture=ph(I+"bottiglia-vetro-incisa-ambientato.webp","Bottiglia in vetro con decorazione Vintage Design incisa","Ambientazione illustrativa",False), ctas=ctas("Incisione su vetro"), crumbs=[("Incisione su vetro", "/incisione-vetro-personalizzata/")],
+       hero_img=(I+"bottiglia-vetro-incisa-ambientato.webp","Bottiglia in vetro con decorazione Vintage Design incisa"), ctas=ctas("Incisione su vetro"), crumbs=[("Incisione su vetro", "/incisione-vetro-personalizzata/")],
        schema=[service("Incisione laser su vetro", "/incisione-vetro-personalizzata/", "Incisione di marchi, dediche e decori su bottiglie e oggetti in vetro."), faq_schema(v_faq)])
 
 # ---------------- REALIZZAZIONI ----------------
@@ -321,7 +328,7 @@ real_body = "".join(section(t, works([dict(img=I + f, alt=f"{n} · {d}", tag=tag
 S.page("/realizzazioni/", "Realizzazioni laser per aziende e locali | Progetti Laser",
        "Lavori di incisione, taglio e marcatura laser realizzati per aziende, ristoranti, cantine, società sportive e privati, con foto originali e ambientazioni.",
        "Realizzazioni", "Una selezione dei lavori usciti dal laboratorio. Ogni immagine dichiara se è una foto originale o un’ambientazione illustrativa ricostruita a partire dal lavoro eseguito.",
-       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"))
+       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"), hero_img=(I+"genoface-personalizzazione-serie.webp", "Targhette Genoface incise e tagliate al laser"))
 
 # ---------------- COME LAVORIAMO ----------------
 S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser",
@@ -333,7 +340,7 @@ S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser"
            ("Bozza, approvazione, produzione", "Approvi bozza e testi definitivi; poi incidiamo, tagliamo o marchiamo e ti avvisiamo per il ritiro o la consegna concordata."),
        ])) +
        section("Come preparare il file", '<div class="two"><div><h3>Formato consigliato</h3><ul class="list"><li>Vettoriale: SVG, PDF, AI, EPS o DXF</li><li>Testi convertiti in tracciati o font indicati</li><li>Misure reali in millimetri</li><li>Per il taglio: linee chiuse, senza doppioni</li></ul></div><div><h3>Se hai solo un’immagine</h3><p>Un JPG o PNG può bastare per una prima valutazione. Se serve, ricostruiamo il logo in vettoriale: lo trovi indicato nel preventivo.</p><p><a href="/preparare-file-incisione-laser/">Guida completa alla preparazione dei file →</a></p><h3>Dati variabili</h3><p>Per nomi, numeri o matricole diversi per pezzo prepara un elenco definitivo (Excel o CSV) e controllalo prima dell’invio.</p></div></div>', alt=True),
-       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"))
+       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"), hero_img=(I+"casaia-incisione.webp", "Incisione laser in corso nel laboratorio"))
 
 # ---------------- PREVENTIVO ----------------
 CATS = ["Generico", "Targhette industriali", "Marcatura acciaio", "Ristorazione e locali", "Cassette in legno", "Taglieri personalizzati", "Gadget aziendali", "Nomi e regali", "Incisione su vetro", "Altro"]
