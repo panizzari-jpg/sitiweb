@@ -4,18 +4,18 @@ D = "progettilaser.it"
 I = "/images/"
 P = PANGEA
 
-CSS = """/* VOICE: laboratorio artigiano-industriale, concreto, preciso
-IDEA: il banco del laser — targhetta in metallo e legno inciso
-PICTURE: targhetta con matricola + tavoletta incisa, raggio rosso
-COLOUR/TYPE: legno bruciato dominante, betulla di supporto, rosso laser; Archivo 800/400
-LAYOUT: hero a due colonne su fondo scuro, bande bianche/betulla, CTA di chiusura scura */
+CSS = """/* VOICE: laboratorio tecnico, preciso, industriale
+IDEA: il piano di lavoro del laser: grafite, griglia di taglio, raggio
+PICTURE: foto reali del laboratorio in trasparenza, linea di scansione animata
+COLOUR/TYPE: grafite dominante, grigio acciaio di supporto, arancio laser (dal logo); Archivo
+LAYOUT: hero fotografico compatto, bande bianche e grigie a griglia, chiusura grafite */
 :root{--fh:'Archivo',system-ui,sans-serif;--fb:'Archivo',system-ui,sans-serif;
---bg:light-dark(#ffffff,#17110c);--ink:light-dark(#241b14,#efe6da);--head:light-dark(#1a120c,#fbf4ea);--mute:light-dark(#5e5046,#bfb0a0);
---sup:light-dark(#f3ead9,#211912);--card:light-dark(#ffffff,#1d1610);--line:light-dark(#e4d6bf,#3a2d22);--line2:light-dark(#bba78c,#5a4636);
---dom:#3a2417;--dom2:#3a2417;--ondom:#fbf1e3;--acc:#d42c24;--acc2:#b3221b;--onacc:#ffffff;--link:light-dark(#a8231c,#ff8a7f);
---foot:#24170e;--onfoot:#f1e5d3;--phbg:light-dark(#e9dcc4,#2a2018);--phink:light-dark(#4a3526,#e0cfb8)}
+--bg:light-dark(#ffffff,#0f1215);--ink:light-dark(#1d2126,#e6e9ed);--head:light-dark(#101317,#f6f7f9);--mute:light-dark(#59616b,#a5adb7);
+--sup:light-dark(#f2f4f6,#161a1f);--card:light-dark(#ffffff,#141820);--line:light-dark(#dde2e7,#2a3038);--line2:light-dark(#b4bcc6,#46505c);
+--grid:light-dark(rgba(20,30,40,.045),rgba(255,255,255,.04));
+--dom:#14181d;--dom2:#14181d;--ondom:#f3f5f7;--acc:#e8501f;--acc2:#c93f12;--onacc:#ffffff;--link:light-dark(#c2410c,#ff8a5c);
+--foot:#0f1215;--onfoot:#d9dee4;--phbg:light-dark(#e8ebef,#1c2129);--phink:light-dark(#3b434d,#c9d0d8)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--dom2:#c9a77d}}
 """
 
 HERO_SVG = """<svg viewBox="0 0 500 400" role="img" aria-label="Illustrazione: targhetta metallica con matricola e tavoletta in legno incisa al laser">
@@ -87,6 +87,7 @@ FOOTER = f"""<footer><div class="wrap"><div class="cols">
 
 S = Site("progettilaser", D, "Progetti Laser", NAV, CSS, [("Archivo", "archivo", [400, 600, 800])], FOOTER, "/brand/logo-ufficiale-20261110.png", ORG, CTABAND, keep_urls=open(__import__("os").path.join(__import__("os").path.dirname(__file__), "sitemap_attuale_laser.txt")).read().split())
 
+S.scan = True
 # ---------------- HOME ----------------
 home_faq = [
     ("Potete lavorare un oggetto che ho già?", "Sì. Inviaci foto, misure e materiale del pezzo insieme al disegno. Verifichiamo superficie, finitura e area accessibile prima di confermare."),
@@ -236,7 +237,7 @@ S.page("/taglieri-personalizzati/", "Taglieri in legno personalizzati | Progetti
            dict(img=I + "taglieri-legno-personalizzati-logo-casaia.webp", alt="Taglieri in legno personalizzati con il logo La Casaia inciso al laser", tag="Ambientazione illustrativa", title="Casaia · risultato", text="Taglieri con marchio inciso.", href="/lavori/casaia/"),
        ]), alt=True) +
        section("Domande frequenti", faq(tg_faq)),
-       hero_img=(I+"incisione-laser-tagliere-legno-logo-casaia.webp","Casaia · tagliere durante l’incisione laser"), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
+       hero_img=(I+"taglieri-legno-personalizzati-logo-casaia.webp","Taglieri in legno personalizzati con logo inciso al laser"), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
        schema=[service("Taglieri personalizzati incisi al laser", "/taglieri-personalizzati/", "Incisione di logo e dediche su taglieri in legno."), faq_schema(tg_faq)])
 
 # ---------------- GADGET ----------------
@@ -257,7 +258,7 @@ S.page("/gadget-aziendali-personalizzati/", "Gadget aziendali personalizzati al 
        ])) +
        section("Per il preventivo", '<ul class="list"><li>Foto o tipo di oggetto e quantità</li><li>Logo o testo definitivo</li><li>Misure del supporto e area lavorabile</li><li>Utilizzo previsto (evento, omaggio, anniversario)</li></ul><p>Per confezioni regalo vedi <a href="/cassette-legno-personalizzate/">cassette in legno</a>.</p>', alt=True) +
        section("Domande frequenti", faq(g_faq)),
-       hero_img=(I+"taccuino-personalizzato-logo-inciso-bioenol.webp","Bioenol · taccuino personalizzato"), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
+       hero_img=(I+"portachiavi-legno-personalizzati-anniversario.webp","Portachiavi in legno incisi al laser per un anniversario aziendale"), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
        schema=[service("Gadget aziendali personalizzati al laser", "/gadget-aziendali-personalizzati/", "Portachiavi, taccuini e oggetti con logo, in serie."), faq_schema(g_faq)])
 
 # ---------------- NOMI E REGALI ----------------
@@ -280,7 +281,7 @@ S.page("/nomi-regali-personalizzati/", "Nomi in legno e regali personalizzati | 
            dict(img=I + "aeroplano-legno-taglio-laser-incastro.webp", alt="Aeroplano biplano in legno tagliato al laser e montato a incastro", tag="Foto originale", title="Aeroplano", text="Biplano in legno assemblato a incastro.", href="/lavori/aeroplano-legno/"),
        ])) +
        section("Domande frequenti", faq(n_faq), alt=True),
-       hero_img=(I+"orsetto-legno-nome-inciso.webp","Nicol · orsetto in legno con nome inciso"), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
+       hero_img=(I+"pannello-legno-albero-nomi-matrimonio.webp","Pannello in legno con albero e nomi tagliati al laser per un matrimonio"), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
        schema=[service("Nomi e regali personalizzati al laser", "/nomi-regali-personalizzati/", "Nomi sagomati, targhe e regali in legno e plexiglass."), faq_schema(n_faq)])
 
 # ---------------- VETRO ----------------
@@ -321,7 +322,7 @@ real_body = "".join(section(t, works([dict(img=I + f, alt=f"{n}: {d[:-1].lower()
 S.page("/realizzazioni/", "Realizzazioni laser per aziende e locali | Progetti Laser",
        "Lavori di incisione, taglio e marcatura laser realizzati per aziende, ristoranti, cantine, società sportive e privati, con foto originali e ambientazioni.",
        "Realizzazioni", "Una selezione dei lavori usciti dal laboratorio. Ogni immagine dichiara se è una foto originale o un’ambientazione illustrativa ricostruita a partire dal lavoro eseguito.",
-       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"), hero_img=(I+"targhette-incise-laser-serie-genoface.webp", "Targhette Genoface incise e tagliate al laser"))
+       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"), hero_img=(I+"marcatura-laser-qr-code-acciaio.webp", "Marcatura laser di QR code su acciaio"))
 
 # ---------------- COME LAVORIAMO ----------------
 S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser",
@@ -333,7 +334,7 @@ S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser"
            ("Bozza, approvazione, produzione", "Approvi bozza e testi definitivi; poi incidiamo, tagliamo o marchiamo e ti avvisiamo per il ritiro o la consegna concordata."),
        ])) +
        section("Come preparare il file", '<div class="two"><div><h3>Formato consigliato</h3><ul class="list"><li>Vettoriale: SVG, PDF, AI, EPS o DXF</li><li>Testi convertiti in tracciati o font indicati</li><li>Misure reali in millimetri</li><li>Per il taglio: linee chiuse, senza doppioni</li></ul></div><div><h3>Se hai solo un’immagine</h3><p>Un JPG o PNG può bastare per una prima valutazione. Se serve, ricostruiamo il logo in vettoriale: lo trovi indicato nel preventivo.</p><p><a href="/preparare-file-incisione-laser/">Guida completa alla preparazione dei file →</a></p><h3>Dati variabili</h3><p>Per nomi, numeri o matricole diversi per pezzo prepara un elenco definitivo (Excel o CSV) e controllalo prima dell’invio.</p></div></div>', alt=True),
-       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"), hero_img=(I+"incisione-laser-tagliere-legno-logo-casaia.webp", "Incisione laser in corso nel laboratorio"))
+       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"), hero_img=(I+"aeroplano-legno-taglio-laser-incastro.webp", "Aeroplano in legno tagliato al laser e montato a incastro"))
 
 # ---------------- PREVENTIVO ----------------
 CATS = ["Generico", "Targhette industriali", "Marcatura acciaio", "Ristorazione e locali", "Cassette in legno", "Taglieri personalizzati", "Gadget aziendali", "Nomi e regali", "Incisione su vetro", "Altro"]
@@ -354,10 +355,10 @@ FORM = f"""<form class="f" action="https://formsubmit.co/{P['email']}" method="P
 S.page("/preventivo/", "Preventivo incisione laser | Progetti Laser",
        "Richiedi un preventivo per incisione, taglio o marcatura laser: indica tipo di lavoro, materiale, misure e quantità e allega il file o una foto.",
        "Chiedi un preventivo", "Più dati ci dai, più il preventivo è preciso: tipo di lavoro, materiale, misure, quantità e, se puoi, il file o una foto del pezzo.",
-       section("Il tuo progetto", FORM), crumbs=[("Preventivo", "/preventivo/")])
+       section("Il tuo progetto", FORM), crumbs=[("Preventivo", "/preventivo/")], hero_img=(I+"cubi-segnatavolo-legno-qr-italiano.webp", "Cubi segnatavolo in legno incisi al laser"))
 
 S.page("/grazie/", "Richiesta inviata · Progetti Laser", "Richiesta ricevuta.", "Grazie, abbiamo ricevuto la richiesta",
-       "Ti rispondiamo appena verificato il lavoro. Se è urgente chiamaci allo <a href=\"tel:+390385320302\">0385 320302</a>.", "", ctas='<div class="ctas"><a class="btn b1" href="/realizzazioni/">Guarda le realizzazioni</a></div>', noindex=True)
+       "Ti rispondiamo appena verificato il lavoro. Se è urgente chiamaci allo <a href=\"tel:+390385320302\">0385 320302</a>.", "", ctas='<div class="ctas"><a class="btn b1" href="/realizzazioni/">Guarda le realizzazioni</a></div>', noindex=True, hero_img=(I+"renne-abete-legno-taglio-laser-natale.webp", "Decorazioni in legno tagliate al laser"))
 
 PRIV = f"""<section class="band"><div class="wrap">
 <h2>Titolare del trattamento</h2><p>{P['ragione']}, {P['via']}, {P['cap']} {P['citta']} ({P['prov']}), P. IVA {P['piva']}. Contatti: <a href="mailto:{P['email']}">{P['email']}</a>, {P['tel']}.</p>
@@ -366,7 +367,7 @@ PRIV = f"""<section class="band"><div class="wrap">
 <h2>Conservazione</h2><p>Conserviamo la corrispondenza per il tempo necessario a gestire la richiesta; i documenti amministrativi seguono gli obblighi di legge.</p>
 <h2>Diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a {P['email']}, e proporre reclamo al Garante per la protezione dei dati personali.</p>
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>"""
-S.page("/privacy/", "Privacy · Progetti Laser", "Informativa privacy di Progetti Laser: titolare, dati del modulo preventivo, servizi terzi, conservazione e diritti.", "Informativa privacy", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy/")])
+S.page("/privacy/", "Privacy · Progetti Laser", "Informativa privacy di Progetti Laser: titolare, dati del modulo preventivo, servizi terzi, conservazione e diritti.", "Informativa privacy", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy/")], hero_img=(I+"pannello-legno-cervo-geometrico-laser.webp", "Pannello in legno con cervo geometrico tagliato al laser"))
 
 if __name__ == "__main__":
     b = S.build()

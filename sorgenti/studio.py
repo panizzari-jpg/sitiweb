@@ -4,23 +4,22 @@ D = "pangeastudio.it"
 P = PANGEA
 MS = "https://s0.wp.com/mshots/v1/https%3A%2F%2F{}%2F?w=1200"
 
-CSS = """/* VOICE: studio locale serio, concreto, orgoglioso dei lavori pubblicati
-IDEA: il portfolio come prova — siti veri di cantine, ristoranti, aziende dell'Oltrepò
-PICTURE: finestra browser + smartphone con un sito di cantina in costruzione
-COLOUR/TYPE: rosso vino dominante, pietra calda di supporto, blu cobalto d'accento; Schibsted Grotesk 800 + Inter
-LAYOUT: hero a due colonne, bande servizi/settori/portfolio, CTA finale sul rosso */
+CSS = """/* VOICE: studio digitale, pulito, tecnico
+IDEA: la griglia di progetto di un sito, sui colori dell'identità Pangea Studio
+PICTURE: lavori reali (siti, fotografie) in trasparenza sotto il titolo
+COLOUR/TYPE: verde profondo #172B2B, menta #A8E7C6, fondo chiaro #F5F3ED (dal manuale del marchio); Schibsted Grotesk + Inter
+LAYOUT: hero fotografico compatto, bande chiare a griglia, chiusura verde profondo */
 :root{--fh:'Schibsted Grotesk',system-ui,sans-serif;--fb:'Inter',system-ui,sans-serif;
---bg:light-dark(#ffffff,#141015);--ink:light-dark(#221c24,#ece6ee);--head:light-dark(#170f19,#faf5fb);--mute:light-dark(#5d5460,#b9aebd);
---sup:light-dark(#f5f0ea,#1e1820);--card:light-dark(#ffffff,#1b151d);--line:light-dark(#e6ddd3,#382d3a);--line2:light-dark(#b9aa9b,#5b4b5e);
---dom:#5c1426;--dom2:#5c1426;--ondom:#fbeff1;--acc:#2a55e6;--acc2:#1f43bf;--onacc:#ffffff;--link:light-dark(#2447c7,#93acff);
---foot:#2b0b14;--onfoot:#f4e5e8;--phbg:light-dark(#efe6dc,#251d27);--phink:light-dark(#5c1426,#e8cfd5)}
+--bg:light-dark(#ffffff,#0e1a1a);--ink:light-dark(#1c2a2a,#e4eeea);--head:light-dark(#122222,#f4f8f6);--mute:light-dark(#526363,#a4b8b2);
+--sup:light-dark(#f5f3ed,#132222);--card:light-dark(#ffffff,#122020);--line:light-dark(#e2e2da,#253838);--line2:light-dark(#b6bdb8,#3f5656);
+--grid:light-dark(rgba(23,43,43,.05),rgba(168,231,198,.05));
+--dom:#172b2b;--dom2:#172b2b;--ondom:#f2f7f4;--acc:#a8e7c6;--acc2:#8fd9b2;--onacc:#0f2020;--link:light-dark(#1f6b4f,#a8e7c6);
+--foot:#0f1f1f;--onfoot:#d6e6df;--phbg:light-dark(#ece9e1,#1a2c2c);--phink:light-dark(#2d4444,#cfe3da)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--dom2:#d77d92}}
 .pf .ph{aspect-ratio:3/2}
-.sec{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
-.sec li{background:var(--sup);border-radius:999px;padding:6px 12px;font-size:14.5px}
 .pk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
-.pk .card.rec{border:2px solid var(--acc)}
+.pk .card.rec{border:2px solid var(--dom)}
+.hero.photo .b2{border-color:var(--acc);color:var(--acc)}
 """
 
 HERO_SVG = """<svg viewBox="0 0 520 420" role="img" aria-label="Illustrazione: sito di una cantina su computer e smartphone">
@@ -175,7 +174,7 @@ S.page("/siti-web/", "Siti web e restyling in provincia di Pavia | Pangea Studio
        section("Restyling di un sito esistente", '<div class="two"><div><ul class="list"><li>Partiamo dagli URL attuali e dalle pagine che portano visite</li><li>Decidiamo quali pagine conservare e quali reindirizzare</li><li>Controlliamo navigazione e moduli prima del passaggio</li><li>Dopo la pubblicazione verifichiamo le pagine in Search Console</li></ul></div><div><p>Un rifacimento fatto male azzera la visibilità costruita negli anni. Per questo il lavoro SEO parte prima della grafica: lo trovi descritto nella pagina <a href="/seo/">SEO</a>.</p></div></div>', alt=True) +
        section("Pacchetti", pk) +
        section("Domande frequenti", faq(sw_faq), alt=True),
-       hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
+       hero_img=("/portfolio/brochure-steel-acciai-pangea-studio.webp", "Materiale di comunicazione Steel Acciai realizzato da Pangea"), ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
        schema=[service("Realizzazione siti web", "/siti-web/", "Siti aziendali, cataloghi e restyling con conservazione delle pagine indicizzate."), faq_schema(sw_faq)])
 
 # ---------------- CANTINE ----------------
@@ -198,7 +197,7 @@ S.page("/siti-web-cantine/", "Siti web per cantine in Oltrepò | Pangea Studio",
        ])) +
        section("Cantine che hanno scelto Pangea Studio", pf_works(group="cantine"), alt=True) +
        section("Domande frequenti", faq(ca_faq)),
-       hero_img=("/photography/fotografia-vino-packaging-ballabio.webp", "Bottiglia Ballabio Farfalla Noir e astuccio, fotografia Pangea Studio"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
+       hero_img=("/photography/fotografia-bottiglia-in-astuccio-ballabio.webp", "Bottiglia Ballabio Farfalla Noir nel suo astuccio, fotografia Pangea Studio"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
        schema=[service("Siti web per cantine", "/siti-web-cantine/", "Siti con schede vini, visite, contatti per distributori e vendita online."), faq_schema(ca_faq)])
 
 # ---------------- RISTORANTI ----------------
@@ -244,7 +243,7 @@ S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
        ])) +
        section("Cosa ricevi", '<div class="two"><div><ul class="list"><li>Lista di interventi ordinata per priorità</li><li>Controlli da ripetere dopo le modifiche</li><li>Elenco delle attività da preventivare, sul sito attuale o su un nuovo progetto</li></ul></div><div><p>Lavoriamo per attività che servono una zona precisa: Oltrepò Pavese, Pavia e provincia. Per chi deve rifare il sito, l’audit è il primo passo per non perdere le visite già conquistate.</p><p><a href="/siti-web/">Restyling senza perdere visibilità →</a></p></div></div>', alt=True) +
        section("Domande frequenti", faq(seo_faq)),
-       hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
+       hero_img=("/photography/fotografia-dettaglio-marchio-ballabio.webp", "Dettaglio del marchio Ballabio sulla confezione"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
        schema=[service("Consulenza SEO", "/seo/", "Audit di indicizzazione, Search Console, contenuti e SEO locale."), faq_schema(seo_faq)])
 
 # ---------------- SOCIAL ----------------
@@ -265,7 +264,7 @@ S.page("/social-media/", "Campagne social Facebook e Instagram | Pangea Studio",
            ("Collegamento al sito", "Ogni contenuto porta dove la persona trova la risposta e il contatto."),
        ])) +
        section("Domande frequenti", faq(so_faq), alt=True),
-       hero_img=("/portfolio/brochure-steel-acciai-pangea-studio.webp", "Materiale di comunicazione Steel Acciai realizzato da Pangea"), ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
+       hero_img=("/photography/fotografia-food-crocchette-a-tavola-con-etika.webp", "Fotografia food realizzata da Pangea Studio per contenuti social"), ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
        schema=[service("Gestione social media", "/social-media/", "Piano editoriale, contenuti e campagne Facebook e Instagram."), faq_schema(so_faq)])
 
 # ---------------- FOTOGRAFIA ----------------
@@ -292,7 +291,7 @@ S.page("/portfolio/", "Portfolio siti web e fotografia | Pangea Studio",
        section("Cantine ed e-commerce del vino", pf_works(group="cantine")) +
        section("Ristoranti e ospitalità", pf_works(group="ospitalita"), alt=True) +
        section("Aziende, industria e artigiani", pf_works(group="aziende")),
-       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"), hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"))
+       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"), hero_img=("/photography/fotografia-vino-astuccio-aperto-ballabio.webp", "Astuccio aperto e bottiglia Ballabio, fotografia Pangea Studio"))
 
 # ---------------- METODO ----------------
 S.page("/metodo/", "Il metodo di lavoro | Pangea Studio",
@@ -308,7 +307,7 @@ S.page("/metodo/", "Il metodo di lavoro | Pangea Studio",
            ("Assistenza e crescita", "Aggiornamenti e priorità successive decisi sui dati."),
        ])) +
        section("Cosa ti chiediamo", '<div class="two"><div><ul class="list"><li>Informazioni sulla tua attività e su cosa vuoi migliorare</li><li>Testi e immagini disponibili</li><li>Se vuoi, il sito attuale o un progetto di riferimento</li><li>Per un rifacimento, gli indirizzi da conservare</li></ul></div><div><h3>Dopo il lancio</h3><ul class="list"><li>Manutenzione tecnica e backup</li><li>Testi, immagini e nuove pagine</li><li>Hosting, dominio e controlli</li><li>Monitoraggio e SEO</li></ul></div></div>', alt=True),
-       crumbs=[("Metodo", "/metodo/")], ctas=ctas("Sito web"))
+       crumbs=[("Metodo", "/metodo/")], ctas=ctas("Sito web"), hero_img=("/photography/fotografia-food-cannoncini-a-tavola-con-etika.webp", "Fotografia still life di cannoncini, Pangea Studio"))
 
 # ---------------- CONTATTI ----------------
 SERV = ["Sito web", "Sito per cantina", "Sito per ristorante", "SEO", "Social media", "Fotografia", "Altro"]
@@ -327,10 +326,10 @@ S.page("/contatti/", "Contatti | Pangea Studio, Santa Maria della Versa (PV)",
        "Contatta Pangea Studio: telefono 0385 320302, WhatsApp, email o modulo. Via XXV Aprile, 7, Santa Maria della Versa (PV).",
        "Contatti", f"Chiamaci allo {P['tel']}, scrivici su WhatsApp o raccontaci il progetto con il modulo: ti rispondiamo con le attività da fare e un preventivo.",
        section("Raccontaci il progetto", f'<div class="two"><div>{FORM}</div><div><h3>Recapiti</h3><p>Telefono <a href="tel:{P["tel_href"]}">{P["tel"]}</a><br>WhatsApp <a href="{P["wa"]}">{P["tel"]}</a><br>Email <a href="mailto:{P["email"]}">{P["email"]}</a></p><h3>Dove siamo</h3><p>{P["via"]}<br>{P["cap"]} {P["citta"]} ({P["prov"]})</p></div></div>', id="richiesta-box"),
-       crumbs=[("Contatti", "/contatti/")])
+       crumbs=[("Contatti", "/contatti/")], hero_img=("/photography/fotografia-food-medaglioni-a-tavola-con-etika.webp", "Fotografia food di medaglioni su piatto nero, Pangea Studio"))
 
 S.page("/grazie/", "Richiesta inviata · Pangea Studio", "Richiesta ricevuta.", "Grazie, abbiamo ricevuto la richiesta",
-       "Ti ricontattiamo per capire meglio il progetto. Nel frattempo puoi guardare i lavori del portfolio.", "", ctas='<div class="ctas"><a class="btn b1" href="/portfolio/">Vai al portfolio</a></div>', noindex=True)
+       "Ti ricontattiamo per capire meglio il progetto. Nel frattempo puoi guardare i lavori del portfolio.", "", ctas='<div class="ctas"><a class="btn b1" href="/portfolio/">Vai al portfolio</a></div>', noindex=True, hero_img=("/photography/fotografia-vino-packaging-ballabio.webp", "Fotografia di packaging Pangea Studio"))
 
 PRIV = f"""<section class="band"><div class="wrap">
 <h2>Titolare del trattamento</h2><p>{P['ragione']}, {P['via']}, {P['cap']} {P['citta']} ({P['prov']}), P. IVA {P['piva']}. Contatti: <a href="mailto:{P['email']}">{P['email']}</a>, {P['tel']}.</p>
@@ -338,7 +337,7 @@ PRIV = f"""<section class="band"><div class="wrap">
 <h2>Servizi di terze parti</h2><p>Il modulo è inoltrato tramite FormSubmit (formsubmit.co) alla nostra casella email. Il sito è ospitato da Hostinger (log tecnici del server). Le anteprime del portfolio sono caricate dal servizio mShots di WordPress.com, che riceve l’indirizzo IP del visitatore. Google Analytics 4 si attiva solo con il consenso alle statistiche; non usiamo cookie di profilazione pubblicitaria; i link a WhatsApp e Instagram aprono servizi con informative proprie.</p>
 <h2>Conservazione e diritti</h2><p>Conserviamo la corrispondenza per il tempo necessario alla richiesta. Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a {P['email']} e proporre reclamo al Garante privacy.</p>
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>"""
-S.page("/privacy-policy/", "Privacy e cookie | Pangea Studio", "Informativa privacy e cookie di Pangea Studio: titolare, dati del modulo, servizi terzi, conservazione e diritti.", "Privacy e cookie", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy-policy/")])
+S.page("/privacy-policy/", "Privacy e cookie | Pangea Studio", "Informativa privacy e cookie di Pangea Studio: titolare, dati del modulo, servizi terzi, conservazione e diritti.", "Privacy e cookie", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy-policy/")], hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Sito web realizzato da Pangea Studio su più dispositivi"))
 
 if __name__ == "__main__":
     b = S.build()

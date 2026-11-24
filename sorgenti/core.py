@@ -36,7 +36,7 @@ p{margin:0 0 1em;max-width:68ch}
 .top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--head);font:800 19px/1 var(--fh)}
-.brand img{height:40px;width:auto;max-width:200px}
+.brand img{height:36px;width:auto;max-width:240px}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]) .brand img{background:#fff;padding:4px 8px;border-radius:8px;box-sizing:content-box}}
 :root[data-theme=dark] .brand img{background:#fff;padding:4px 8px;border-radius:8px;box-sizing:content-box}
 .nav{margin-left:auto;display:flex;gap:4px;align-items:center}
@@ -58,18 +58,35 @@ p{margin:0 0 1em;max-width:68ch}
 .b2{background:transparent;color:inherit;border-color:currentColor}
 .nav .btn{min-height:42px;padding:9px 16px;font-size:15px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-/* hero foto */
-.hero.photo{position:relative;overflow:hidden;background:#1b1714;min-height:min(78vh,720px);display:flex;align-items:flex-end}
-.hero.photo .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
-.hero.photo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,9,.86) 0%,rgba(14,11,9,.62) 45%,rgba(14,11,9,.15) 100%),linear-gradient(0deg,rgba(14,11,9,.55),transparent 50%);z-index:1}
-.hero.photo .wrap{position:relative;z-index:2;display:block;width:100%;color:#fff}
-.hero.photo .htxt{max-width:680px}
+/* hero foto: foto in trasparenza con titolo sopra */
+.hero.photo{position:relative;overflow:hidden;background:var(--dom);min-height:clamp(420px,58vh,580px);display:flex;align-items:center;isolation:isolate}
+.hero.photo .bgimg{position:absolute;inset:-4% 0;width:100%;height:108%;object-fit:cover;object-position:center 40%;z-index:-2;opacity:.55;animation:kb 18s ease-out both}
+.hero.photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,color-mix(in srgb,var(--dom) 92%,transparent) 0%,color-mix(in srgb,var(--dom) 70%,transparent) 50%,color-mix(in srgb,var(--dom) 35%,transparent) 100%)}
+.hero.photo::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent,#000 60%)}
+.hero.photo .wrap{display:block;width:100%;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(40px,6vw,72px)}
+.hero.photo .htxt{max-width:700px}
 .hero.photo h1,.hero.photo .lead,.hero.photo .crumb,.hero.photo .proof{color:#fff}
 .hero.photo .b2{color:#fff}
+.hero .htxt>*{animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+.hero .htxt>*:nth-child(2){animation-delay:.08s}.hero .htxt>*:nth-child(3){animation-delay:.16s}.hero .htxt>*:nth-child(4){animation-delay:.24s}.hero .htxt>*:nth-child(5){animation-delay:.32s}
+.scan{position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc) 30%,#fff 50%,var(--acc) 70%,transparent);box-shadow:0 0 18px 2px var(--acc);opacity:.85;z-index:0;animation:scan 5.5s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+@keyframes scan{0%{top:6%;opacity:0}10%{opacity:.85}90%{opacity:.85}100%{top:94%;opacity:0}}
 .hero.solo .wrap{grid-template-columns:1fr}.hero.solo .htxt{max-width:760px}
-@media(max-width:820px){.hero.photo{min-height:auto}.hero.photo .wrap{padding-top:180px}.hero.photo::before{background:linear-gradient(0deg,rgba(14,11,9,.9) 0%,rgba(14,11,9,.7) 55%,rgba(14,11,9,.25) 100%)}}
 .lead2{font-size:19px;line-height:1.6;max-width:72ch}
 .cols2{columns:2 320px;column-gap:48px}.cols2 p{break-inside:avoid}
+/* look tecnico */
+.band h2::before{content:"";display:block;width:36px;height:3px;background:var(--acc);margin-bottom:16px}
+.alt{background-color:var(--sup);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px}
+.card{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .2s}
+a.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,20,30,.12);border-color:var(--acc)}
+a.card .more{transition:letter-spacing .2s}a.card:hover .more{letter-spacing:.02em}
+.work{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}.work:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,20,30,.14)}
+.work .ph img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}.work:hover .ph img{transform:scale(1.05)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.scan{display:none}.hero.photo .bgimg{animation:none}}
 /* hero */
 .hero{background:var(--dom);color:var(--ondom)}
 .hero h1,.hero h2{color:var(--ondom)}
@@ -151,6 +168,7 @@ footer li a{display:inline-block;padding:4px 0}
 SCRIPT = r"""<script>{
 for(const b of document.querySelectorAll('.brand img')){const h=()=>b.style.display='none';if(b.complete&&!b.naturalWidth)h();b.addEventListener('error',h)}
 for(const p of document.querySelectorAll('.ph img')){const f=()=>p.parentNode.classList.add('noimg');if(p.complete&&!p.naturalWidth)f();p.addEventListener('error',f)}
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('main .band .wrap>*:not(h2), .card, .work, .steps li').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
 const live=/(^|\.)(progettilaser\.it|pangeastudio\.it)$/.test(location.hostname);
 for(const fm of document.querySelectorAll('form.f')){
  const q=new URLSearchParams(location.search),s=fm.querySelector('[data-pre]');
@@ -211,9 +229,10 @@ def section(title, body, alt=False, intro=None, id=None):
 class Site:
     def __init__(self, key, domain, name, nav, css_vars, fonts, footer_html, logo, org_schema, ctaband, keep_urls=()):
         self.keep_urls = list(keep_urls)
+        self.scan = False
         from PIL import Image as _I
         _p = ROOT / 'asset_originali' / key / logo.lstrip('/')
-        self.logo_w = round(_I.open(_p).size[0] * 40 / _I.open(_p).size[1]) if _p.exists() else 120
+        self.logo_w = round(_I.open(_p).size[0] * 36 / _I.open(_p).size[1]) if _p.exists() else 120
         self.key, self.domain, self.name, self.nav = key, domain, name, nav
         self.css_vars, self.fonts, self.footer_html, self.logo = css_vars, fonts, footer_html, logo
         self.org_schema, self.ctaband = org_schema, ctaband
@@ -241,6 +260,7 @@ class Site:
             pic = ""
             herobg = f'<img class="bgimg" src="{E(hi[0])}" alt="{E(hi[1])}" fetchpriority="high" decoding="async" width="1600" height="1000">'
             herocls = "hero photo"
+            herobg += '<span class="scan" aria-hidden="true"></span>' if self.scan else ''
         else:
             herobg, herocls = "", "hero" + ("" if p["picture"] else " solo")
         robots = '<meta name="robots" content="noindex">' if p["noindex"] else ""
@@ -263,7 +283,7 @@ class Site:
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="/"><img src="{self.logo}" alt="{E(self.name)}" height="40" width="{self.logo_w}"></a>
+<a class="brand" href="/"><img src="{self.logo}" alt="{E(self.name)}" height="36" width="{self.logo_w}"></a>
 <nav class="nav" aria-label="Principale">{navh}<a class="btn b1" href="{ch}">{E(ct)}</a></nav>
 <details class="menu"><summary aria-label="Menu principale">Menu</summary><nav class="drop" aria-label="Menu mobile">{drop}</nav></details>
 </div></header>

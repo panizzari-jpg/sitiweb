@@ -23,7 +23,13 @@
 /images/targa-metallo-incisa-laser-fbc-casteggio.webp
 /images/targhe-battesimo-legno-personalizzate.webp
 /images/targhette-incise-laser-serie-genoface.webp
+/photography/fotografia-bottiglia-in-astuccio-ballabio.webp
+/photography/fotografia-dettaglio-marchio-ballabio.webp
 /photography/fotografia-food-brasato-a-tavola-con-etika.webp
+/photography/fotografia-food-cannoncini-a-tavola-con-etika.webp
+/photography/fotografia-food-crocchette-a-tavola-con-etika.webp
+/photography/fotografia-food-medaglioni-a-tavola-con-etika.webp
+/photography/fotografia-vino-astuccio-aperto-ballabio.webp
 /photography/fotografia-vino-packaging-ballabio.webp
 /portfolio/brochure-steel-acciai-pangea-studio.webp
 /portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp
