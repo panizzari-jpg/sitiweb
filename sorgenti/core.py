@@ -36,7 +36,9 @@ p{margin:0 0 1em;max-width:68ch}
 .top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--head);font:800 19px/1 var(--fh)}
-.brand img{width:38px;height:38px;object-fit:contain}
+.brand img{height:40px;width:auto;max-width:200px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .brand img{background:#fff;padding:4px 8px;border-radius:8px;box-sizing:content-box}}
+:root[data-theme=dark] .brand img{background:#fff;padding:4px 8px;border-radius:8px;box-sizing:content-box}
 .nav{margin-left:auto;display:flex;gap:4px;align-items:center}
 .nav a{color:var(--ink);text-decoration:none;padding:10px 11px;border-radius:8px;font-size:15.5px;white-space:nowrap}
 .nav a:hover,.nav a[aria-current]{background:var(--sup)}
@@ -197,6 +199,9 @@ def section(title, body, alt=False, intro=None, id=None):
 class Site:
     def __init__(self, key, domain, name, nav, css_vars, fonts, footer_html, logo, org_schema, ctaband, keep_urls=()):
         self.keep_urls = list(keep_urls)
+        from PIL import Image as _I
+        _p = ROOT / 'asset_originali' / key / logo.lstrip('/')
+        self.logo_w = round(_I.open(_p).size[0] * 40 / _I.open(_p).size[1]) if _p.exists() else 120
         self.key, self.domain, self.name, self.nav = key, domain, name, nav
         self.css_vars, self.fonts, self.footer_html, self.logo = css_vars, fonts, footer_html, logo
         self.org_schema, self.ctaband = org_schema, ctaband
@@ -239,7 +244,7 @@ class Site:
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="/"><img src="{self.logo}" alt="" width="38" height="38">{E(self.name)}</a>
+<a class="brand" href="/"><img src="{self.logo}" alt="{E(self.name)}" height="40" width="{self.logo_w}"></a>
 <nav class="nav" aria-label="Principale">{navh}<a class="btn b1" href="{ch}">{E(ct)}</a></nav>
 <details class="menu"><summary aria-label="Menu principale">Menu</summary><nav class="drop" aria-label="Menu mobile">{drop}</nav></details>
 </div></header>
@@ -264,6 +269,9 @@ class Site:
             for w in weights:
                 shutil.copy(FONTS / pkg / "files" / f"{pkg}-latin-{w}-normal.woff2", out / f"assets/fonts-{self.key}")
         (out / f"assets/{self.key}-20261124.css").write_text(font_css(self.fonts).replace("KEY", self.key) + "\n" + self.css_vars + BASE_CSS)
+        src = ROOT / 'asset_originali' / self.key
+        if src.exists():
+            shutil.copytree(src, out, dirs_exist_ok=True)
         urls = []
         for p in self.pages:
             d = out / p["path"].strip("/")
