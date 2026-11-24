@@ -241,6 +241,13 @@ class Site:
     def page(self, path, title, desc, h1, lead, body, picture="", ctas="", proof="", crumbs=None, schema=None, noindex=False, hero_img=None):
         self.pages.append(dict(path=path, title=title, desc=desc, h1=h1, lead=lead, body=body, picture=picture, ctas=ctas, proof=proof, crumbs=crumbs, schema=schema or [], noindex=noindex, hero_img=hero_img))
 
+    def icons(self):
+        d = ROOT / 'asset_originali' / self.key
+        if (d / 'favicon.ico').exists():
+            return ('<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml">'
+                    '<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/apple-touch-icon.png">')
+        return f'<link rel="icon" href="{self.logo}">'
+
     def render(self, p):
         url = f"https://{self.domain}{p['path']}"
         navh = "".join(f'<a href="{h}"{" aria-current=page" if h == p["path"] else ""}>{E(t)}</a>' for t, h in self.nav[:-1])
@@ -275,7 +282,7 @@ class Site:
 <meta property="og:type" content="website"><meta property="og:locale" content="it_IT">
 <meta property="og:title" content="{E(p['title'])}"><meta property="og:description" content="{E(p['desc'])}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="https://{self.domain}{(p.get("hero_img") or (self.logo,))[0]}">
-<link rel="icon" href="{self.logo}">
+{self.icons()}
 <link rel="preload" href="/assets/fonts-{self.key}/{self.fonts[0][1]}-latin-{self.fonts[0][2][-1]}-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/{self.key}-20261124.css">
 <script type="application/ld+json">{ld}</script>
