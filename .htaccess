@@ -1,0 +1,6 @@
+# FASE DI PROVA: non indicizzare. Sostituire al passaggio di dominio.
+<IfModule mod_headers.c>
+Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+DirectoryIndex index.html
+ErrorDocument 404 /404-nuovo.html
