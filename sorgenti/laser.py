@@ -85,7 +85,7 @@ FOOTER = f"""<footer><div class="wrap"><div class="cols">
 <div><h2>Gruppo Pangea</h2><ul><li><a href="https://www.pangeacomunicazione.it/">Pangea Comunicazione</a> · stampa, adesivi, abbigliamento</li><li><a href="https://insegneinlegno.com/">Insegne in Legno</a></li><li><a href="https://pangeastudio.it/">Pangea Studio</a> · siti e fotografia</li></ul></div>
 </div><div class="legal">© 2026 {P['ragione']} · P. IVA {P['piva']} · <a href="/privacy/">Privacy</a> · <a href="/cookie/">Cookie</a></div></div></footer>"""
 
-S = Site("progettilaser", D, "Progetti Laser", NAV, CSS, [("Archivo", "archivo", [400, 600, 800])], FOOTER, "/brand/logo-ufficiale-20261110.png", ORG, CTABAND, keep_urls=open(__import__("os").path.join(__import__("os").path.dirname(__file__), "sitemap_attuale_laser.txt")).read().split())
+S = Site("progettilaser", D, "Progetti Laser", NAV, CSS, [("Archivo", "archivo", [400, 600, 800])], FOOTER, "/brand/logo-ufficiale-20261110.png", ORG, CTABAND, keep_urls=[])
 
 S.scan = True
 # ---------------- HOME ----------------
@@ -369,7 +369,12 @@ PRIV = f"""<section class="band"><div class="wrap">
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>"""
 S.page("/privacy/", "Privacy · Progetti Laser", "Informativa privacy di Progetti Laser: titolare, dati del modulo preventivo, servizi terzi, conservazione e diritti.", "Informativa privacy", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy/")], hero_img=(I+"pannello-legno-cervo-geometrico-laser.webp", "Pannello in legno con cervo geometrico tagliato al laser"))
 
+import laser_extra
+laser_extra.add_extra(S, ctas, service, P, D)
+
 if __name__ == "__main__":
     b = S.build()
+    with open(b / "htaccess-da-unire.txt", "a") as _f:
+        _f.write(laser_extra.redirects(D))
     make_preview(b, S.key)
     print(b, len(S.pages))
