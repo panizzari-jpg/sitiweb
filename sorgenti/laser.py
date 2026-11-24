@@ -109,10 +109,10 @@ S.page("/", "Incisione laser su legno, metallo e vetro | Progetti Laser",
        ])) +
        section("Materiali che lavoriamo", '<div class="two"><div><ul class="list"><li><b>Legno</b>: incisione che fa risaltare la venatura; taglio di sagome, lettere e incastri.</li><li><b>Metallo e acciaio</b>: marcatura di loghi, testi, matricole e QR.</li><li><b>Acrilico e plexiglass</b>: finiture trasparenti o colorate, da valutare progetto per progetto.</li><li><b>Vetro</b>: bottiglie e oggetti, con decori leggibili in controluce.</li><li><b>Ardesia</b>: lastre e sottobicchieri con marchio o grafica.</li></ul></div><div><p>Il risultato dipende dal materiale, dalla finitura e dalla forma del pezzo: per questo ogni lavoro parte da una verifica su foto e misure.</p><p>Per oggetti ed espositori su misura lavoriamo anche con la <a href="/oggetti-personalizzati-3d/">stampa 3D</a>.</p><p class="note">L’incisione personalizza l’oggetto ma non ne certifica l’idoneità alimentare o normativa: quella dipende dal prodotto di partenza.</p></div></div>', alt=True) +
        section("Lavori reali dal laboratorio", works([
-           dict(img=I + "genoface-personalizzazione-serie.webp", alt="Genoface · targhette incise e tagliate al laser per apparecchiature", tag="Foto originale", title="Genoface", text="Targhette incise e tagliate per apparecchiature estetiche, in serie.", href="/targhette-industriali-laser/", cta="Targhette per macchinari"),
-           dict(img=I + "sottobicchieri-ardesia-vintage.webp", alt="The Resto Vintage · sottobicchieri quadrati in ardesia incisi", tag="Foto originale", title="The Resto Vintage", text="Sottobicchieri in ardesia con grafica vintage del locale.", href="/ristorazione-accoglienza/", cta="Articoli per locali"),
-           dict(img=I + "targa-fbc-casteggio.webp", alt="FBC Casteggio 1898 · targa a scudo con aquila e stella", tag="Foto originale", title="FBC Casteggio 1898", text="Targa a scudo per la società sportiva, con aquila dorata e stella.", href="/realizzazioni/", cta="Tutte le realizzazioni"),
-           dict(img=I + "taccuino-bioenol.webp", alt="Bioenol · taccuino con spirale, fascia ed elastico e penna coordinata", tag="Foto originale", title="Bioenol", text="Taccuino personalizzato con penna coordinata.", href="/gadget-aziendali-personalizzati/", cta="Gadget aziendali"),
+           dict(img=I + "targhette-incise-laser-serie-genoface.webp", alt="Targhette in serie con logo Genoface incise al laser nel laboratorio Progetti Laser", tag="Foto originale", title="Genoface", text="Targhette incise e tagliate per apparecchiature estetiche, in serie.", href="/targhette-industriali-laser/", cta="Targhette per macchinari"),
+           dict(img=I + "sottobicchieri-ardesia-incisi-laser-resto-vintage.webp", alt="Sottobicchieri quadrati in ardesia incisi al laser con il logo di The Resto Vintage", tag="Foto originale", title="The Resto Vintage", text="Sottobicchieri in ardesia con grafica vintage del locale.", href="/ristorazione-accoglienza/", cta="Articoli per locali"),
+           dict(img=I + "targa-metallo-incisa-laser-fbc-casteggio.webp", alt="Targa a scudo in metallo incisa e tagliata al laser per FBC Casteggio 1898", tag="Foto originale", title="FBC Casteggio 1898", text="Targa a scudo per la società sportiva, con aquila dorata e stella.", href="/realizzazioni/", cta="Tutte le realizzazioni"),
+           dict(img=I + "taccuino-personalizzato-logo-inciso-bioenol.webp", alt="Taccuino in cartone riciclato con logo Bioenol inciso al laser e penna coordinata", tag="Foto originale", title="Bioenol", text="Taccuino personalizzato con penna coordinata.", href="/gadget-aziendali-personalizzati/", cta="Gadget aziendali"),
        ]) + '<p style="margin-top:18px"><a href="/realizzazioni/">Vedi tutte le realizzazioni →</a></p>') +
        section("Come funziona", steps([
            ("Ci mandi i dati", "Foto del pezzo o del materiale, misure, quantità e file del logo o del testo."),
@@ -120,7 +120,7 @@ S.page("/", "Incisione laser su legno, metallo e vetro | Progetti Laser",
            ("Approvi e produciamo", "Confermi bozza e testi definitivi, poi incidiamo, tagliamo o marchiamo i pezzi."),
        ]) + '<p style="margin-top:18px"><a href="/come-lavoriamo/">Il metodo completo e come preparare i file →</a></p>', alt=True) +
        section("Domande frequenti", faq(home_faq)),
-       hero_img=(I+"casaia-incisione.webp", "Incisione laser su un tagliere in legno nel laboratorio Progetti Laser"), ctas=ctas("Generico"),
+       hero_img=(I+"incisione-laser-tagliere-legno-logo-casaia.webp", "Incisione laser su un tagliere in legno nel laboratorio Progetti Laser"), ctas=ctas("Generico"),
        proof='<p class="proof">Lavori per aziende, locali, cantine e privati: Genoface, Il Reuccio delle Porchette, Trattoria Il Ceppo, Sparkling World, Distilleria Gualco, FBC Casteggio 1898.</p>',
        schema=[faq_schema(home_faq)])
 
@@ -138,12 +138,12 @@ S.page("/targhette-industriali-laser/", "Targhette industriali con matricola al 
        section("Quando servono", '<div class="cols2"><p>Una targhetta identificativa accompagna la macchina per tutta la sua vita: in officina, durante l’assistenza, nei controlli. Deve restare leggibile e riportare dati corretti, pezzo per pezzo. Per questo lavoriamo partendo dal tuo elenco di matricole e da un layout approvato, e incidiamo invece di stampare.</p><p>È la soluzione tipica per costruttori di macchinari e apparecchiature, officine che producono piccole serie, aziende che devono identificare attrezzature o ricambi, e per chi vuole un QR che porti al manuale o all’assistenza.</p></div>') +
        section("Cosa possiamo incidere", '<div class="two"><div><ul class="list"><li>Logo e ragione sociale del costruttore</li><li>Modello, matricola e numero di serie</li><li>Codici prodotto e anno</li><li>QR code verso manuale, scheda o assistenza</li><li>Dati variabili diversi per ogni targhetta della serie</li></ul></div><div><p>Partiamo dal tuo layout o lo impaginiamo noi sulla base dei testi definitivi. Prima della produzione ricevi una bozza da approvare con i dati di un campione.</p><p class="note">Le informazioni normative vanno fornite dal cliente: l’incisione non sostituisce certificazioni o marcature obbligatorie.</p></div></div>') +
        section("Lavori realizzati", works([
-           dict(img=I + "genoface-personalizzazione-serie.webp", alt="Genoface · targhette incise e tagliate per apparecchiature estetiche", tag="Foto originale", title="Genoface", text="Targhette incise e tagliate al laser per apparecchiature estetiche e industriali.", href="/lavori/genoface-personalizzazione-serie/"),
-           dict(img=I + "qr-code-marcatura-laser.webp", alt="QR code marcati al laser per targhette identificative", tag="Foto originale", title="QR code incisi", text="QR marcati al laser per targhette identificative e menu.", href="/lavori/qr-code-marcatura-laser/"),
+           dict(img=I + "targhette-incise-laser-serie-genoface.webp", alt="Targhette identificative Genoface incise al laser in serie per apparecchiature", tag="Foto originale", title="Genoface", text="Targhette incise e tagliate al laser per apparecchiature estetiche e industriali.", href="/lavori/genoface-personalizzazione-serie/"),
+           dict(img=I + "marcatura-laser-qr-code-acciaio.webp", alt="QR code marcati al laser su lamiera di acciaio per targhette identificative", tag="Foto originale", title="QR code incisi", text="QR marcati al laser per targhette identificative e menu.", href="/lavori/qr-code-marcatura-laser/"),
        ]), alt=True) +
        section("Cosa ci serve per il preventivo", '<ul class="list"><li>Misure della targhetta e posizione di eventuali fori</li><li>Materiale preferito (plastica o metallo) e ambiente di utilizzo</li><li>Testi fissi e file del logo</li><li>Elenco dei dati variabili e quantità</li></ul><p>Per marcature direttamente su componenti in acciaio vedi <a href="/marcatura-acciaio/">marcatura laser su acciaio</a>.</p>') +
        section("Domande frequenti", faq(t_faq), alt=True),
-       hero_img=(I+"genoface-personalizzazione-serie.webp","Genoface · targhette incise e tagliate al laser"), ctas=ctas("Targhette industriali"), crumbs=[("Targhette industriali", "/targhette-industriali-laser/")],
+       hero_img=(I+"targhette-incise-laser-serie-genoface.webp","Genoface · targhette incise e tagliate al laser"), ctas=ctas("Targhette industriali"), crumbs=[("Targhette industriali", "/targhette-industriali-laser/")],
        schema=[service("Targhette industriali incise al laser", "/targhette-industriali-laser/", "Targhette in plastica e metallo con matricola, numero di serie, codici e QR."), faq_schema(t_faq)])
 
 # ---------------- ACCIAIO ----------------
@@ -163,12 +163,11 @@ S.page("/marcatura-acciaio/", "Marcatura laser su acciaio e coltelli | Progetti 
            ("Due tonalità", "Toni affiancati distinguono parti diverse del disegno, per esempio simbolo e nome."),
        ])) +
        section("Esempi", works([
-           dict(img=I + "post-logo-coltelli.webp", alt="Confronto tra marcatura piena e a contorno su coltelli in acciaio", tag="Immagine del post", title="Piena e a contorno", text="Lo stesso marchio su coltelli con le due finiture a confronto."),
-           dict(img=I + "post-acciaio-bicolore.webp", alt="Marcatura a due tonalità su acciaio spazzolato", tag="Immagine del post", title="Bicolore su acciaio spazzolato", text="Due tonalità per separare le parti del disegno.", href="/lavori/marcatura-bicolore-acciaio/"),
-           dict(img=I + "reuccio-marcatura.webp", alt="Marcatura bicolore per Il Reuccio delle Porchette", tag="Immagine dell’archivio", title="Il Reuccio delle Porchette", text="Dal logo al numero di serie, in tre finiture.", href="/marcatura-laser-personalizzata/"),
+           dict(img=I + "marcatura-laser-coltello-acciaio-logo.webp", alt="Coltello in acciaio con logo marcato al laser: confronto tra marcatura piena e a contorno", tag="Immagine del post", title="Piena e a contorno", text="Lo stesso marchio su coltelli con le due finiture a confronto."),
+           dict(img=I + "marcatura-laser-bicolore-acciaio-spazzolato.webp", alt="Marcatura laser bicolore su acciaio spazzolato con logo Il Reuccio delle Porchette", tag="Immagine del post", title="Bicolore su acciaio spazzolato", text="Due tonalità per separare le parti del disegno.", href="/lavori/marcatura-bicolore-acciaio/"),
        ]), alt=True) +
        section("Domande frequenti", faq(a_faq) + '<p style="margin-top:18px">Per targhette con matricola vedi <a href="/targhette-industriali-laser/">targhette industriali</a>.</p>'),
-       hero_img=(I+"post-logo-coltelli.webp","Coltelli in acciaio con marcatura piena e a contorno"), ctas=ctas("Marcatura acciaio"), crumbs=[("Marcatura acciaio", "/marcatura-acciaio/")],
+       hero_img=(I+"marcatura-laser-coltello-acciaio-logo.webp","Coltelli in acciaio con marcatura piena e a contorno"), ctas=ctas("Marcatura acciaio"), crumbs=[("Marcatura acciaio", "/marcatura-acciaio/")],
        schema=[service("Marcatura laser su acciaio", "/marcatura-acciaio/", "Marcatura di coltelli e utensili in acciaio con logo, nomi e numeri di serie."), faq_schema(a_faq)])
 
 # ---------------- RISTORAZIONE ----------------
@@ -193,13 +192,12 @@ S.page("/ristorazione-accoglienza/", "QR da tavolo, segnatavolo e menu in legno 
            ("Ardesia personalizzata", "Lastre e sottobicchieri in ardesia incisi.", "/ardesia-personalizzata/"),
        ])) +
        section("Lavori per locali", works([
-           dict(img=I + "sottobicchieri-ardesia-vintage.webp", alt="The Resto Vintage · sottobicchieri quadrati in ardesia", tag="Foto originale", title="The Resto Vintage", text="Sottobicchieri in ardesia con grafica vintage.", href="/lavori/sottobicchieri-ardesia-vintage/"),
-           dict(img=I + "ceppo-supporti-qr-editoriale.webp", alt="Trattoria Il Ceppo · supporti QR da tavolo in legno", tag="Ambientazione illustrativa", title="Trattoria Il Ceppo", text="Supporti QR da tavolo con logo e link al menu.", href="/lavori/il-ceppo/"),
-           dict(img=I + "italiano-cubi-laboratorio-editoriale-640.webp", alt="Italiano · cubi segnatavolo con numero, logo e QR", tag="Ambientazione illustrativa", title="Italiano", text="Cubi segnatavolo con numero, logo e QR.", href="/lavori/italiano/"),
-           dict(img=I + "carta-vini-legno.webp", alt="Carta dei vini in legno con vigneti incisi e scritta WINE tagliata", tag="Ambientazione illustrativa", title="Carta dei vini in legno", text="Copertina con vigneti incisi e scritta tagliata.", href="/lavori/carta-vini-legno/"),
+           dict(img=I + "sottobicchieri-ardesia-incisi-laser-resto-vintage.webp", alt="Sottobicchieri in ardesia incisi al laser per The Resto Vintage", tag="Foto originale", title="The Resto Vintage", text="Sottobicchieri in ardesia con grafica vintage.", href="/lavori/sottobicchieri-ardesia-vintage/"),
+           dict(img=I + "qr-code-tavolo-legno-trattoria-il-ceppo.webp", alt="Supporti da tavolo in legno con QR code del menu e logo Trattoria Il Ceppo incisi al laser", tag="Ambientazione illustrativa", title="Trattoria Il Ceppo", text="Supporti QR da tavolo con logo e link al menu.", href="/lavori/il-ceppo/"),
+           dict(img=I + "cubi-segnatavolo-legno-qr-italiano.webp", alt="Cubi segnatavolo in legno con numero, logo e QR code incisi al laser per il locale Italiano", tag="Ambientazione illustrativa", title="Italiano", text="Cubi segnatavolo con numero, logo e QR.", href="/lavori/italiano/"),
        ]), alt=True) +
        section("Domande frequenti", faq(r_faq)),
-       hero_img=(I+"ceppo-supporti-qr-editoriale.webp","Trattoria Il Ceppo · supporti QR da tavolo"), ctas=ctas("Ristorazione e locali"), crumbs=[("Ristoranti e locali", "/ristorazione-accoglienza/")],
+       hero_img=(I+"qr-code-tavolo-legno-trattoria-il-ceppo.webp","Trattoria Il Ceppo · supporti QR da tavolo"), ctas=ctas("Ristorazione e locali"), crumbs=[("Ristoranti e locali", "/ristorazione-accoglienza/")],
        schema=[service("Articoli personalizzati al laser per la ristorazione", "/ristorazione-accoglienza/", "QR code da tavolo, segnatavolo, menu e sottobicchieri personalizzati."), faq_schema(r_faq)])
 
 # ---------------- CASSETTE ----------------
@@ -215,13 +213,11 @@ S.page("/cassette-legno-personalizzate/", "Cassette in legno per vino con logo |
        section("Il regalo che porta il nome della cantina", '<div class="cols2"><p>In Oltrepò la cassetta di legno è il modo più naturale di presentare una bottiglia importante: a un cliente, a un distributore, a Natale. Con il marchio inciso diventa parte dell’immagine della cantina; con una dedica per ogni destinatario diventa un regalo personale.</p><p>Incidiamo cassette, coperchi e confezioni con il logo uguale per tutta la serie o con testi diversi pezzo per pezzo, partendo da un elenco controllato insieme. Lavoriamo anche per distillerie e aziende che regalano vino ai propri clienti.</p></div>') +
        section("Due modi per partire", '<div class="two"><div><h3>Hai già le cassette</h3><p>Vedi anche <a href="/incisione-coperchi-legno-conto-terzi/">incisione di coperchi in legno conto terzi</a>. Inviaci foto, misure, quantità e materiale. Verifichiamo superficie, planarità e finitura, poi incidiamo logo, testi o grafica.</p></div><div><h3>Scegliamo insieme la confezione</h3><p>Partiamo dalle bottiglie o dagli oggetti da contenere e dalle loro misure, anche per confezioni verticali con manico.</p></div></div><p class="note">Un marchio molto dettagliato può richiedere una revisione del file per restare leggibile sul legno.</p>') +
        section("Lavori per cantine e aziende", works([
-           dict(img=I + "sparkling-world-stifel-confezione-originale-editoriale-640.webp", alt="Sparkling World · confezione in legno con incisione fine", tag="Ambientazione illustrativa", title="Sparkling World / Stifel", text="Confezione con incisione laser fine.", href="/lavori/sparkling-world/"),
-           dict(img=I + "ottavio-confezioni-vino-editoriale.webp", alt="Ottavio · confezioni vino in legno incise", tag="Ambientazione illustrativa", title="Ottavio", text="Confezioni vino con incisione personalizzata.", href="/lavori/ottavio/"),
-           dict(img=I + "gualco.webp", alt="Distilleria Gualco · marchio e dedica incisi sul legno", tag="Ambientazione illustrativa", title="Distilleria Gualco", text="Marchio e dedica personale sul legno.", href="/lavori/gualco/"),
-           dict(img=I + "bosco-longhino.webp", alt="Boscolonghino · confezioni verticali in legno con manico", tag="Ambientazione illustrativa", title="Boscolonghino", text="Confezioni verticali con manico e nome inciso.", href="/lavori/bosco-longhino/"),
+           dict(img=I + "cassetta-legno-incisa-sparkling-world-stifel.webp", alt="Cassetta in legno per bottiglia incisa al laser con logo Sparkling World per Stifel", tag="Ambientazione illustrativa", title="Sparkling World / Stifel", text="Confezione con incisione laser fine.", href="/lavori/sparkling-world/"),
+           dict(img=I + "cassetta-vino-legno-incisa-ottavio.webp", alt="Cassette in legno per vino Ottavio Provincia di Pavia IGT incise al laser", tag="Ambientazione illustrativa", title="Ottavio", text="Confezioni vino con incisione personalizzata.", href="/lavori/ottavio/"),
        ]) + '<p class="note" style="margin-top:14px">Le ambientazioni illustrative mostrano lavori eseguiti in un contesto ricostruito; la foto originale è nella pagina del lavoro.</p>', alt=True) +
        section("Domande frequenti", faq(c_faq) + '<p style="margin-top:18px">Etichette e adesivi per bottiglie: <a href="https://www.pangeacomunicazione.it/">Pangea Comunicazione</a>.</p>'),
-       hero_img=(I+"ottavio-confezioni-vino-editoriale.webp","Ottavio · confezioni vino in legno incise"), ctas=ctas("Cassette in legno"), crumbs=[("Cassette in legno", "/cassette-legno-personalizzate/")],
+       hero_img=(I+"cassetta-vino-legno-incisa-ottavio.webp","Ottavio · confezioni vino in legno incise"), ctas=ctas("Cassette in legno"), crumbs=[("Cassette in legno", "/cassette-legno-personalizzate/")],
        schema=[service("Cassette in legno per vino personalizzate", "/cassette-legno-personalizzate/", "Incisione laser di marchi e dediche su cassette e confezioni in legno."), faq_schema(c_faq)])
 
 # ---------------- TAGLIERI ----------------
@@ -236,12 +232,11 @@ S.page("/taglieri-personalizzati/", "Taglieri in legno personalizzati | Progetti
        "Incidiamo logo, testi concordati e dediche su taglieri in legno, per regali, presentazioni aziendali e locali. Scegliamo insieme area e formato dell’incisione in base a forma, manico e bordi.",
        section("Cosa personalizziamo", '<ul class="list"><li>Logo o marchio inciso</li><li>Testi e dediche, impaginati insieme al logo senza sovrapporsi</li><li>Area e formato dell’incisione, scelti su misure e forma</li><li>Controllo di leggibilità sui testi piccoli</li></ul><p>Le venature del legno fanno parte del risultato: l’incisione non è una stampa a colore uniforme.</p>') +
        section("Lavori realizzati", works([
-           dict(img=I + "casaia-incisione-640.webp", alt="Casaia · tagliere durante l’incisione laser", tag="Foto originale", title="Casaia · in lavorazione", text="Il tagliere durante l’incisione nel nostro laboratorio.", href="/lavori/casaia/"),
-           dict(img=I + "casaia-taglieri-editoriale.webp", alt="Casaia · taglieri personalizzati", tag="Ambientazione illustrativa", title="Casaia · risultato", text="Taglieri con marchio inciso.", href="/lavori/casaia/"),
-           dict(img=I + "gruppo-casa-30-anni.webp", alt="Gruppo Casa · tavolette in legno incise per i 30 anni", tag="Ambientazione illustrativa", title="Gruppo Casa, 30 anni", text="Due tavolette con marchio e anniversario.", href="/lavori/gruppo-casa-30-anni/"),
+           dict(img=I + "incisione-laser-tagliere-legno-logo-casaia.webp", alt="Tagliere in legno di faggio durante l’incisione laser del logo La Casaia", tag="Foto originale", title="Casaia · in lavorazione", text="Il tagliere durante l’incisione nel nostro laboratorio.", href="/lavori/casaia/"),
+           dict(img=I + "taglieri-legno-personalizzati-logo-casaia.webp", alt="Taglieri in legno personalizzati con il logo La Casaia inciso al laser", tag="Ambientazione illustrativa", title="Casaia · risultato", text="Taglieri con marchio inciso.", href="/lavori/casaia/"),
        ]), alt=True) +
        section("Domande frequenti", faq(tg_faq)),
-       hero_img=(I+"casaia-incisione-640.webp","Casaia · tagliere durante l’incisione laser"), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
+       hero_img=(I+"incisione-laser-tagliere-legno-logo-casaia.webp","Casaia · tagliere durante l’incisione laser"), ctas=ctas("Taglieri personalizzati"), crumbs=[("Taglieri", "/taglieri-personalizzati/")],
        schema=[service("Taglieri personalizzati incisi al laser", "/taglieri-personalizzati/", "Incisione di logo e dediche su taglieri in legno."), faq_schema(tg_faq)])
 
 # ---------------- GADGET ----------------
@@ -256,13 +251,13 @@ S.page("/gadget-aziendali-personalizzati/", "Gadget aziendali personalizzati al 
        "Portachiavi in legno, taccuini e oggetti con il tuo logo per eventi, anniversari, fiere e omaggi ai clienti: personalizzazioni in serie, con taglio e incisione laser.",
        section("Gadget che si tengono", '<div class="cols2"><p>Un gadget funziona quando chi lo riceve lo usa: un portachiavi in legno, un taccuino con la copertina incisa, un oggetto legato a una ricorrenza dell’azienda. L’incisione laser dà un aspetto più curato della stampa e resiste nel tempo.</p><p>Li prepariamo per anniversari, eventi, fiere e omaggi ai clienti, anche in serie con testi diversi. Ci servono il tipo di oggetto, la quantità e il logo definitivo; il resto lo verifichiamo insieme prima della produzione.</p></div>') +
        section("Idee realizzate", works([
-           dict(img=I + "taccuino-bioenol.webp", alt="Bioenol · taccuino con spirale, fascia ed elastico blu e penna coordinata", tag="Foto originale", title="Taccuino Bioenol", text="Spirale, fascia ed elastico blu, con penna coordinata.", href="/lavori/taccuino-bioenol/"),
-           dict(img=I + "taccuino-carnevale.webp", alt="Taccuino a spirale nera con copertina incisa a tema Carnevale", tag="Foto originale", title="Taccuino Carnevale", text="Copertina incisa con un disegno dedicato alla ricorrenza.", href="/lavori/taccuino-carnevale/"),
-           dict(img=I + "studio-portachiavi-legno-anniversario-mockup.webp", alt="Portachiavi tondi in legno 40 Anniversario Acconciature Giovanna con anelli metallici", tag="Ambientazione illustrativa", title="Portachiavi 40° anniversario", text="Portachiavi tondi in legno con incisione e anelli metallici.", href="/lavori/portachiavi-legno-anniversario/"),
+           dict(img=I + "taccuino-personalizzato-logo-inciso-bioenol.webp", alt="Bioenol · taccuino con spirale, fascia ed elastico blu e penna coordinata", tag="Foto originale", title="Taccuino Bioenol", text="Spirale, fascia ed elastico blu, con penna coordinata.", href="/lavori/taccuino-bioenol/"),
+           dict(img=I + "taccuino-copertina-incisa-laser-carnevale.webp", alt="Taccuino a spirale con copertina in cartone incisa al laser a tema Carnevale", tag="Foto originale", title="Taccuino Carnevale", text="Copertina incisa con un disegno dedicato alla ricorrenza.", href="/lavori/taccuino-carnevale/"),
+           dict(img=I + "portachiavi-legno-personalizzati-anniversario.webp", alt="Portachiavi tondi in legno incisi al laser per il 40° anniversario di Acconciature Giovanna", tag="Ambientazione illustrativa", title="Portachiavi 40° anniversario", text="Portachiavi tondi in legno con incisione e anelli metallici.", href="/lavori/portachiavi-legno-anniversario/"),
        ])) +
        section("Per il preventivo", '<ul class="list"><li>Foto o tipo di oggetto e quantità</li><li>Logo o testo definitivo</li><li>Misure del supporto e area lavorabile</li><li>Utilizzo previsto (evento, omaggio, anniversario)</li></ul><p>Per confezioni regalo vedi <a href="/cassette-legno-personalizzate/">cassette in legno</a>.</p>', alt=True) +
        section("Domande frequenti", faq(g_faq)),
-       hero_img=(I+"taccuino-bioenol.webp","Bioenol · taccuino personalizzato"), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
+       hero_img=(I+"taccuino-personalizzato-logo-inciso-bioenol.webp","Bioenol · taccuino personalizzato"), ctas=ctas("Gadget aziendali"), crumbs=[("Gadget aziendali", "/gadget-aziendali-personalizzati/")],
        schema=[service("Gadget aziendali personalizzati al laser", "/gadget-aziendali-personalizzati/", "Portachiavi, taccuini e oggetti con logo, in serie."), faq_schema(g_faq)])
 
 # ---------------- NOMI E REGALI ----------------
@@ -277,15 +272,15 @@ S.page("/nomi-regali-personalizzati/", "Nomi in legno e regali personalizzati | 
        "Nomi sagomati, targhe per la cameretta, battesimi, dediche per maestre e ricorrenze: tagliamo e incidiamo legno e plexiglass a partire dal nome e dall’idea che hai in mente.",
        section("Un nome, una data, un ricordo", '<p class="lead2">Nascite, battesimi, matrimoni, compleanni, un grazie alle maestre: tagliamo e incidiamo il legno e il plexiglass partendo dal nome e dall’idea che hai in mente. Ti mandiamo una bozza con carattere e disposizione e, quando la approvi, realizziamo il pezzo. Ogni regalo qui sotto è stato fatto nel nostro laboratorio.</p>') +
        section("Regali che abbiamo realizzato", works([
-           dict(img=I + "orsetto-nicol.webp", alt="Orsetto in legno con nome Nicol inciso sul cuore e fiocco rosa", tag="Foto originale", title="Nicol", text="Orsetto in legno con il nome inciso sul cuore.", href="/lavori/orsetto-nicol-legno/"),
-           dict(img=I + "targhe-battesimo-legno.webp", alt="Due targhe quadrate in legno per battesimo con angeli e cuori", tag="Foto originale", title="Battesimo", text="Due targhe quadrate con angeli e cuori.", href="/lavori/targhe-battesimo-legno/"),
-           dict(img=I + "cuore-plexiglass-mamma.webp", alt="Cuore trasparente in plexiglass con dedica Ti voglio bene Mamma", tag="Foto originale", title="Per la mamma", text="Cuore in plexiglass trasparente con dedica.", href="/lavori/cuore-plexiglass-mamma/"),
-           dict(img=I + "scritta-giuseppe-sagomata.webp", alt="Scritta sagomata multistrato con il nome Giuseppe", tag="Foto originale", title="Giuseppe", text="Nome sagomato su più livelli.", href="/lavori/scritta-giuseppe-sagomata/"),
-           dict(img=I + "albero-personalizzato-adam-valentina.webp", alt="Pannello con albero, nomi Adam e Valentina, data e cuori", tag="Foto originale", title="Adam e Valentina", text="Albero con nomi, data e cuori.", href="/lavori/albero-personalizzato-adam-valentina/"),
-           dict(img=I + "aeroplano-legno.webp", alt="Biplano in legno montato a incastro", tag="Foto originale", title="Aeroplano", text="Biplano in legno assemblato a incastro.", href="/lavori/aeroplano-legno/"),
+           dict(img=I + "orsetto-legno-nome-inciso.webp", alt="Orsetto in legno tagliato al laser con nome inciso sul cuore e nastro rosa", tag="Foto originale", title="Orsetto con nome", text="Orsetto in legno con il nome inciso sul cuore.", href="/lavori/orsetto-nicol-legno/"),
+           dict(img=I + "targhe-battesimo-legno-personalizzate.webp", alt="Targhe in legno per battesimo con angeli, nome e dedica incisi e tagliati al laser", tag="Foto originale", title="Battesimo", text="Due targhe quadrate con angeli e cuori.", href="/lavori/targhe-battesimo-legno/"),
+           dict(img=I + "cuore-plexiglass-inciso-dedica-mamma.webp", alt="Cuore in plexiglass trasparente inciso al laser con dedica Ti voglio bene Mamma su base in legno", tag="Foto originale", title="Per la mamma", text="Cuore in plexiglass trasparente con dedica.", href="/lavori/cuore-plexiglass-mamma/"),
+           dict(img=I + "scritta-legno-sagomata-nome-giuseppe.webp", alt="Scritta in legno sagomata al laser su più livelli con il nome Giuseppe", tag="Foto originale", title="Giuseppe", text="Nome sagomato su più livelli.", href="/lavori/scritta-giuseppe-sagomata/"),
+           dict(img=I + "pannello-legno-albero-nomi-matrimonio.webp", alt="Pannello in legno per matrimonio con albero, nomi e data tagliati al laser", tag="Foto originale", title="Adam e Valentina", text="Albero con nomi, data e cuori.", href="/lavori/albero-personalizzato-adam-valentina/"),
+           dict(img=I + "aeroplano-legno-taglio-laser-incastro.webp", alt="Aeroplano biplano in legno tagliato al laser e montato a incastro", tag="Foto originale", title="Aeroplano", text="Biplano in legno assemblato a incastro.", href="/lavori/aeroplano-legno/"),
        ])) +
        section("Domande frequenti", faq(n_faq), alt=True),
-       hero_img=(I+"orsetto-nicol-editoriale.webp","Nicol · orsetto in legno con nome inciso"), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
+       hero_img=(I+"orsetto-legno-nome-inciso.webp","Nicol · orsetto in legno con nome inciso"), ctas=ctas("Nomi e regali"), crumbs=[("Nomi e regali", "/nomi-regali-personalizzati/")],
        schema=[service("Nomi e regali personalizzati al laser", "/nomi-regali-personalizzati/", "Nomi sagomati, targhe e regali in legno e plexiglass."), faq_schema(n_faq)])
 
 # ---------------- VETRO ----------------
@@ -298,37 +293,35 @@ S.page("/incisione-vetro-personalizzata/", "Incisione laser su vetro e bottiglie
        "Incisione laser su bottiglie e oggetti in vetro: marchi, dediche e decorazioni per regali e serie personalizzate. Verifica del formato prima della conferma.",
        "Incisione laser su vetro e bottiglie",
        "Incidiamo marchi, dediche e decorazioni su bottiglie e oggetti in vetro, per regali e serie personalizzate. La leggibilità dipende dalla luce che attraversa il vetro e dalla posizione del decoro.",
-       section("Come valutiamo un oggetto in vetro", '<div class="two"><div><ul class="list"><li>Forma dell’oggetto e area raggiungibile</li><li>Spessore e caratteristiche del vetro</li><li>Posizione del decoro rispetto alla luce</li><li>Dimensione minima dei testi</li></ul></div><div>' + works([dict(img=I + "bottiglia-vetro-incisa-ambientato.webp", alt="Bottiglia in vetro con chiusura meccanica e decorazione Vintage Design incisa", tag="Ambientazione illustrativa", title="Bottiglia Vintage Design", text="Scritte e motivi ornamentali su bottiglia con tappo meccanico.", href="/lavori/bottiglia-vetro-incisa/")]) + '</div></div>') +
+       section("Come valutiamo un oggetto in vetro", '<div class="two"><div><ul class="list"><li>Forma dell’oggetto e area raggiungibile</li><li>Spessore e caratteristiche del vetro</li><li>Posizione del decoro rispetto alla luce</li><li>Dimensione minima dei testi</li></ul></div><div>' + works([dict(img=I + "bottiglia-vetro-incisa-laser-vintage.webp", alt="Bottiglia in vetro con chiusura meccanica e decorazione Vintage Design incisa", tag="Ambientazione illustrativa", title="Bottiglia Vintage Design", text="Scritte e motivi ornamentali su bottiglia con tappo meccanico.", href="/lavori/bottiglia-vetro-incisa/")]) + '</div></div>') +
        section("Domande frequenti", faq(v_faq), alt=True),
-       hero_img=(I+"bottiglia-vetro-incisa-ambientato.webp","Bottiglia in vetro con decorazione Vintage Design incisa"), ctas=ctas("Incisione su vetro"), crumbs=[("Incisione su vetro", "/incisione-vetro-personalizzata/")],
+       hero_img=(I+"bottiglia-vetro-incisa-laser-vintage.webp","Bottiglia in vetro con decorazione Vintage Design incisa"), ctas=ctas("Incisione su vetro"), crumbs=[("Incisione su vetro", "/incisione-vetro-personalizzata/")],
        schema=[service("Incisione laser su vetro", "/incisione-vetro-personalizzata/", "Incisione di marchi, dediche e decori su bottiglie e oggetti in vetro."), faq_schema(v_faq)])
 
 # ---------------- REALIZZAZIONI ----------------
 REAL = [
     ("Aziende e industria", [
-        ("genoface-personalizzazione-serie.webp", "Genoface", "Targhette incise e tagliate per apparecchiature.", "Foto originale", "/lavori/genoface-personalizzazione-serie/"),
-        ("qr-code-marcatura-laser.webp", "QR code incisi", "QR marcati per targhette e menu.", "Foto originale", "/lavori/qr-code-marcatura-laser/"),
-        ("taccuino-bioenol.webp", "Bioenol", "Taccuino con penna coordinata.", "Foto originale", "/lavori/taccuino-bioenol/"),
-        ("post-acciaio-bicolore.webp", "Bicolore su acciaio", "Due tonalità su acciaio spazzolato.", "Immagine del post", "/lavori/marcatura-bicolore-acciaio/"),
+        ("targhette-incise-laser-serie-genoface.webp", "Genoface", "Targhette incise e tagliate per apparecchiature.", "Foto originale", "/lavori/genoface-personalizzazione-serie/"),
+        ("marcatura-laser-qr-code-acciaio.webp", "QR code incisi", "QR marcati per targhette e menu.", "Foto originale", "/lavori/qr-code-marcatura-laser/"),
+        ("taccuino-personalizzato-logo-inciso-bioenol.webp", "Bioenol", "Taccuino con penna coordinata.", "Foto originale", "/lavori/taccuino-bioenol/"),
+        ("marcatura-laser-bicolore-acciaio-spazzolato.webp", "Bicolore su acciaio", "Due tonalità su acciaio spazzolato.", "Immagine del post", "/lavori/marcatura-bicolore-acciaio/"),
     ]),
     ("Locali e cantine", [
-        ("sottobicchieri-ardesia-vintage.webp", "The Resto Vintage", "Sottobicchieri in ardesia.", "Foto originale", "/lavori/sottobicchieri-ardesia-vintage/"),
-        ("ceppo-supporti-qr-editoriale.webp", "Trattoria Il Ceppo", "Supporti QR da tavolo.", "Ambientazione illustrativa", "/lavori/il-ceppo/"),
-        ("tonalini-ardesia.webp", "Tenute Tonalini", "Lastra in ardesia con marchio.", "Ambientazione illustrativa", "/lavori/tonalini-ardesia/"),
-        ("sparkling-world-stifel-confezione-originale-editoriale-640.webp", "Sparkling World / Stifel", "Confezione con incisione fine.", "Ambientazione illustrativa", "/lavori/sparkling-world/"),
+        ("sottobicchieri-ardesia-incisi-laser-resto-vintage.webp", "The Resto Vintage", "Sottobicchieri in ardesia.", "Foto originale", "/lavori/sottobicchieri-ardesia-vintage/"),
+        ("qr-code-tavolo-legno-trattoria-il-ceppo.webp", "Trattoria Il Ceppo", "Supporti QR da tavolo.", "Ambientazione illustrativa", "/lavori/il-ceppo/"),
+        ("cassetta-legno-incisa-sparkling-world-stifel.webp", "Sparkling World / Stifel", "Confezione con incisione fine.", "Ambientazione illustrativa", "/lavori/sparkling-world/"),
     ]),
     ("Premi, decorazioni e regali", [
-        ("targa-fbc-casteggio.webp", "FBC Casteggio 1898", "Targa a scudo con aquila e stella.", "Foto originale", "/lavori/targa-fbc-casteggio/"),
-        ("renne-decorazione-invernale.webp", "Renne e abete", "Sagome natalizie in legno.", "Foto originale", "/lavori/renne-decorazione-invernale/"),
-        ("pannello-cervo-geometrico.webp", "Cervo geometrico", "Profilo chiaro su legno scuro.", "Foto originale", "/lavori/pannello-cervo-geometrico/"),
-        ("sagome-cane-gatto.webp", "Cane e gatto", "Sagome con dettagli incisi.", "Foto originale", "/lavori/sagome-cane-gatto/"),
+        ("targa-metallo-incisa-laser-fbc-casteggio.webp", "FBC Casteggio 1898", "Targa a scudo con aquila e stella.", "Foto originale", "/lavori/targa-fbc-casteggio/"),
+        ("renne-abete-legno-taglio-laser-natale.webp", "Renne e abete", "Sagome natalizie in legno.", "Foto originale", "/lavori/renne-decorazione-invernale/"),
+        ("pannello-legno-cervo-geometrico-laser.webp", "Cervo geometrico", "Profilo chiaro su legno scuro.", "Foto originale", "/lavori/pannello-cervo-geometrico/"),
     ]),
 ]
-real_body = "".join(section(t, works([dict(img=I + f, alt=f"{n} · {d}", tag=tag, title=n, text=d, href=h) for f, n, d, tag, h in items]), alt=i % 2 == 1) for i, (t, items) in enumerate(REAL))
+real_body = "".join(section(t, works([dict(img=I + f, alt=f"{n}: {d[:-1].lower() if d.endswith('.') else d} – lavorazione laser Progetti Laser", tag=tag, title=n, text=d, href=h) for f, n, d, tag, h in items]), alt=i % 2 == 1) for i, (t, items) in enumerate(REAL))
 S.page("/realizzazioni/", "Realizzazioni laser per aziende e locali | Progetti Laser",
        "Lavori di incisione, taglio e marcatura laser realizzati per aziende, ristoranti, cantine, società sportive e privati, con foto originali e ambientazioni.",
        "Realizzazioni", "Una selezione dei lavori usciti dal laboratorio. Ogni immagine dichiara se è una foto originale o un’ambientazione illustrativa ricostruita a partire dal lavoro eseguito.",
-       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"), hero_img=(I+"genoface-personalizzazione-serie.webp", "Targhette Genoface incise e tagliate al laser"))
+       real_body, crumbs=[("Realizzazioni", "/realizzazioni/")], ctas=ctas("Generico"), hero_img=(I+"targhette-incise-laser-serie-genoface.webp", "Targhette Genoface incise e tagliate al laser"))
 
 # ---------------- COME LAVORIAMO ----------------
 S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser",
@@ -340,7 +333,7 @@ S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser"
            ("Bozza, approvazione, produzione", "Approvi bozza e testi definitivi; poi incidiamo, tagliamo o marchiamo e ti avvisiamo per il ritiro o la consegna concordata."),
        ])) +
        section("Come preparare il file", '<div class="two"><div><h3>Formato consigliato</h3><ul class="list"><li>Vettoriale: SVG, PDF, AI, EPS o DXF</li><li>Testi convertiti in tracciati o font indicati</li><li>Misure reali in millimetri</li><li>Per il taglio: linee chiuse, senza doppioni</li></ul></div><div><h3>Se hai solo un’immagine</h3><p>Un JPG o PNG può bastare per una prima valutazione. Se serve, ricostruiamo il logo in vettoriale: lo trovi indicato nel preventivo.</p><p><a href="/preparare-file-incisione-laser/">Guida completa alla preparazione dei file →</a></p><h3>Dati variabili</h3><p>Per nomi, numeri o matricole diversi per pezzo prepara un elenco definitivo (Excel o CSV) e controllalo prima dell’invio.</p></div></div>', alt=True),
-       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"), hero_img=(I+"casaia-incisione.webp", "Incisione laser in corso nel laboratorio"))
+       crumbs=[("Come lavoriamo", "/come-lavoriamo/")], ctas=ctas("Generico"), hero_img=(I+"incisione-laser-tagliere-legno-logo-casaia.webp", "Incisione laser in corso nel laboratorio"))
 
 # ---------------- PREVENTIVO ----------------
 CATS = ["Generico", "Targhette industriali", "Marcatura acciaio", "Ristorazione e locali", "Cassette in legno", "Taglieri personalizzati", "Gadget aziendali", "Nomi e regali", "Incisione su vetro", "Altro"]

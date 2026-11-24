@@ -291,16 +291,20 @@ class Site:
         src = ROOT / 'asset_originali' / self.key
         if src.exists():
             shutil.copytree(src, out, dirs_exist_ok=True)
-        urls = []
+        urls, imgs = [], {}
         for p in self.pages:
             d = out / p["path"].strip("/")
             d.mkdir(parents=True, exist_ok=True)
-            (d / "index.html").write_text(self.render(p))
+            h = self.render(p)
+            (d / "index.html").write_text(h)
             if not p["noindex"]:
                 urls.append(p['path'])
+                imgs[p['path']] = sorted({m for m in re.findall(r'<img[^>]+src="(/(?:images|portfolio|photography)/[^"]+)"', h)})
         urls += [u for u in self.keep_urls if u not in urls]
-        urls = [f"https://{self.domain}{u}" for u in urls]
-        (out / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+        def entry(u):
+            im = "".join(f"<image:image><image:loc>https://{self.domain}{i}</image:loc></image:image>" for i in imgs.get(u, []))
+            return f"<url><loc>https://{self.domain}{u}</loc>{im}</url>\n"
+        (out / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(entry(u) for u in urls) + "</urlset>\n")
         (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: https://{self.domain}/sitemap.xml\n")
         (out / "htaccess-da-unire.txt").write_text(HTACCESS.replace("DOMAIN", self.domain))
         (out / "404-nuovo.html").write_text(self.render(dict(path="/404/", title=f"Pagina non trovata · {self.name}", desc="Pagina non trovata", h1="Pagina non trovata", lead="L’indirizzo non esiste o è stato spostato. Usa il menu o torna alla home.", body="", picture="", ctas='<div class="ctas"><a class="btn b1" href="/">Torna alla home</a></div>', proof="", crumbs=None, schema=[], noindex=True)).replace('<link rel="canonical" href="https://' + self.domain + '/404/">', "").replace(f'<meta property="og:url" content="https://{self.domain}/404/">', ""))

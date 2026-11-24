@@ -93,8 +93,8 @@ PF = [
     ("Trattoria Il Ceppo", "Ristorazione", "Sito web", "trattoriailceppo.it", None, "ospitalita"),
     ("Agricola Casa Garello", "Agriturismo e ospitalità", "Sito web", "agricolacasagarello.it", None, "ospitalita"),
     ("Verdi Cascina Vecchia", "Agriturismo e ospitalità", "Sito web", "verdicascinavecchia.it", None, "ospitalita"),
-    ("Frutta Secca Distribuzione", "Aziende e distribuzione", "Sito web", "www.fruttaseccadistribuzione.it", "/portfolio/web-frutta-secca.webp", "aziende"),
-    ("Steel Acciai", "Aziende e industria", "Sito web e brochure", "steelacciai.eu", "/portfolio/grafica-brochure-steel.webp", "aziende"),
+    ("Frutta Secca Distribuzione", "Aziende e distribuzione", "Sito web", "www.fruttaseccadistribuzione.it", "/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "aziende"),
+    ("Steel Acciai", "Aziende e industria", "Sito web e brochure", "steelacciai.eu", "/portfolio/brochure-steel-acciai-pangea-studio.webp", "aziende"),
     ("Mecap", "Aziende e industria", "Sito web", "mecap.it", None, "aziende"),
     ("Ecosoil Ambiente", "Ambiente e servizi tecnici", "Sito web", "ecosoil-ambiente.it", None, "aziende"),
     ("Costruzioni Edili Caputo", "Edilizia e impianti", "Sito web", "costruzioniedilicaputo.it", None, "aziende"),
@@ -145,7 +145,7 @@ S.page("/", "Siti web, restyling e campagne social in Oltrepò | Pangea Studio",
            ("Verifica e crescita", "Controlli prima della messa online, poi dati di Search Console per decidere i passi successivi."),
        ]) + '<p style="margin-top:18px"><a href="/metodo/">Il metodo in sette passaggi →</a></p>', alt=True) +
        section("Domande frequenti", faq(h_faq)),
-       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"),
+       hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"),
        proof='<p class="proof">18 siti del portfolio online da visitare: cantine, ristoranti, agriturismi, industria ed edilizia.</p>',
        schema=[faq_schema(h_faq)])
 
@@ -175,7 +175,7 @@ S.page("/siti-web/", "Siti web e restyling in provincia di Pavia | Pangea Studio
        section("Restyling di un sito esistente", '<div class="two"><div><ul class="list"><li>Partiamo dagli URL attuali e dalle pagine che portano visite</li><li>Decidiamo quali pagine conservare e quali reindirizzare</li><li>Controlliamo navigazione e moduli prima del passaggio</li><li>Dopo la pubblicazione verifichiamo le pagine in Search Console</li></ul></div><div><p>Un rifacimento fatto male azzera la visibilità costruita negli anni. Per questo il lavoro SEO parte prima della grafica: lo trovi descritto nella pagina <a href="/seo/">SEO</a>.</p></div></div>', alt=True) +
        section("Pacchetti", pk) +
        section("Domande frequenti", faq(sw_faq), alt=True),
-       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
+       hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("Sito web"), crumbs=[("Siti web", "/siti-web/")],
        schema=[service("Realizzazione siti web", "/siti-web/", "Siti aziendali, cataloghi e restyling con conservazione delle pagine indicizzate."), faq_schema(sw_faq)])
 
 # ---------------- CANTINE ----------------
@@ -198,7 +198,7 @@ S.page("/siti-web-cantine/", "Siti web per cantine in Oltrepò | Pangea Studio",
        ])) +
        section("Cantine che hanno scelto Pangea Studio", pf_works(group="cantine"), alt=True) +
        section("Domande frequenti", faq(ca_faq)),
-       hero_img=("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e astuccio, fotografia Pangea Studio"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
+       hero_img=("/photography/fotografia-vino-packaging-ballabio.webp", "Bottiglia Ballabio Farfalla Noir e astuccio, fotografia Pangea Studio"), ctas=ctas("Sito per cantina"), crumbs=[("Siti web", "/siti-web/"), ("Cantine", "/siti-web-cantine/")],
        schema=[service("Siti web per cantine", "/siti-web-cantine/", "Siti con schede vini, visite, contatti per distributori e vendita online."), faq_schema(ca_faq)])
 
 # ---------------- RISTORANTI ----------------
@@ -220,7 +220,7 @@ S.page("/siti-web-ristoranti/", "Siti web per ristoranti e agriturismi | Pangea 
        ])) +
        section("Locali e agriturismi online", pf_works(group="ospitalita"), alt=True) +
        section("Domande frequenti", faq(ri_faq)),
-       hero_img=("/photography/etika/brasato.webp", "Piatto fotografato per A Tavola con Etika"), ctas=ctas("Sito per ristorante"), crumbs=[("Siti web", "/siti-web/"), ("Ristoranti", "/siti-web-ristoranti/")],
+       hero_img=("/photography/fotografia-food-brasato-a-tavola-con-etika.webp", "Piatto fotografato per A Tavola con Etika"), ctas=ctas("Sito per ristorante"), crumbs=[("Siti web", "/siti-web/"), ("Ristoranti", "/siti-web-ristoranti/")],
        schema=[service("Siti web per ristoranti", "/siti-web-ristoranti/", "Siti con menu, orari, indicazioni e prenotazioni da smartphone."), faq_schema(ri_faq)])
 
 # ---------------- SEO ----------------
@@ -244,7 +244,7 @@ S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
        ])) +
        section("Cosa ricevi", '<div class="two"><div><ul class="list"><li>Lista di interventi ordinata per priorità</li><li>Controlli da ripetere dopo le modifiche</li><li>Elenco delle attività da preventivare, sul sito attuale o su un nuovo progetto</li></ul></div><div><p>Lavoriamo per attività che servono una zona precisa: Oltrepò Pavese, Pavia e provincia. Per chi deve rifare il sito, l’audit è il primo passo per non perdere le visite già conquistate.</p><p><a href="/siti-web/">Restyling senza perdere visibilità →</a></p></div></div>', alt=True) +
        section("Domande frequenti", faq(seo_faq)),
-       hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
+       hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
        schema=[service("Consulenza SEO", "/seo/", "Audit di indicizzazione, Search Console, contenuti e SEO locale."), faq_schema(seo_faq)])
 
 # ---------------- SOCIAL ----------------
@@ -265,7 +265,7 @@ S.page("/social-media/", "Campagne social Facebook e Instagram | Pangea Studio",
            ("Collegamento al sito", "Ogni contenuto porta dove la persona trova la risposta e il contatto."),
        ])) +
        section("Domande frequenti", faq(so_faq), alt=True),
-       hero_img=("/portfolio/grafica-brochure-steel.webp", "Materiale di comunicazione Steel Acciai realizzato da Pangea"), ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
+       hero_img=("/portfolio/brochure-steel-acciai-pangea-studio.webp", "Materiale di comunicazione Steel Acciai realizzato da Pangea"), ctas=ctas("Social media"), crumbs=[("Social media", "/social-media/")],
        schema=[service("Gestione social media", "/social-media/", "Piano editoriale, contenuti e campagne Facebook e Instagram."), faq_schema(so_faq)])
 
 # ---------------- FOTOGRAFIA ----------------
@@ -274,17 +274,15 @@ S.page("/fotografia/", "Fotografia di prodotto, vino e food | Pangea Studio",
        "Fotografia di prodotto, vino e food",
        "A supporto di siti e campagne fotografiamo prodotti, bottiglie, packaging e piatti. Luci, sfondi e composizione si scelgono con te, sullo stile della tua attività.",
        section("Lavori fotografici", works([
-           dict(img="/photography/ballabio/packaging.webp", alt="Bottiglia Ballabio Farfalla Noir e astuccio", tag="Foto originale", title="Ballabio · vino e packaging", text="Bottiglia, astuccio e dettagli del marchio.", href="/fotografia-vino/", cta="Il progetto"),
-           dict(img="/photography/etika/brasato.webp", alt="Brasato fotografato per A Tavola con Etika", tag="Foto originale", title="A Tavola con Etika · food", text="Serie coordinata di piatti, usata anche nella grafica.", href="/fotografia-food-etika/", cta="Il progetto"),
-           dict(img="/photography/ballabio/dettaglio-logo.webp", alt="Dettaglio del marchio Ballabio sulla confezione", tag="Foto originale", title="Fotografia di prodotto", text="Forma, materiali e dettagli, dallo scatto all’uso sul sito.", href="/fotografia-prodotti/", cta="Il servizio"),
-           dict(img="/photography/dallo-scatto-alla-copertina.png", alt="Still life di frutta e proposta di copertina Naturalmente", tag="Proposta grafica", title="Dallo scatto alla copertina", text="Uno still life trasformato in copertina editoriale."),
-       ])) +
+           dict(img="/photography/fotografia-vino-packaging-ballabio.webp", alt="Fotografia still life della bottiglia Ballabio Farfalla Noir con astuccio, realizzata da Pangea Studio", tag="Foto originale", title="Ballabio · vino e packaging", text="Bottiglia, astuccio e dettagli del marchio.", href="/fotografia-vino/", cta="Il progetto"),
+           dict(img="/photography/fotografia-food-brasato-a-tavola-con-etika.webp", alt="Fotografia food di un brasato su piatto nero per A Tavola con Etika, realizzata da Pangea Studio", tag="Foto originale", title="A Tavola con Etika · food", text="Serie coordinata di piatti, usata anche nella grafica.", href="/fotografia-food-etika/", cta="Il progetto"),
+       ]) + '<p style="margin-top:18px">Approfondisci: <a href="/fotografia-vino/">fotografia di vino e packaging</a> · <a href="/fotografia-food-etika/">fotografia food</a> · <a href="/fotografia-prodotti/">fotografia di prodotto</a></p>') +
        section("Come lavoriamo", steps([
            ("Prepariamo lo scatto", "Prodotti, quantità, stile e uso delle immagini."),
            ("Fotografiamo i dettagli", "Luce, composizione e resa delle superfici su ogni soggetto."),
            ("Consegniamo le immagini", "Selezionate e preparate nei formati per stampa e digitale."),
        ]), alt=True),
-       hero_img=("/photography/ballabio/packaging.webp", "Bottiglia Ballabio Farfalla Noir e astuccio"), ctas=ctas("Fotografia"), crumbs=[("Fotografia", "/fotografia/")],
+       hero_img=("/photography/fotografia-vino-packaging-ballabio.webp", "Bottiglia Ballabio Farfalla Noir e astuccio"), ctas=ctas("Fotografia"), crumbs=[("Fotografia", "/fotografia/")],
        schema=[service("Fotografia di prodotto e food", "/fotografia/", "Still life di prodotto, vino, packaging e food.")])
 
 # ---------------- PORTFOLIO ----------------
@@ -294,7 +292,7 @@ S.page("/portfolio/", "Portfolio siti web e fotografia | Pangea Studio",
        section("Cantine ed e-commerce del vino", pf_works(group="cantine")) +
        section("Ristoranti e ospitalità", pf_works(group="ospitalita"), alt=True) +
        section("Aziende, industria e artigiani", pf_works(group="aziende")),
-       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"), hero_img=("/portfolio/web-frutta-secca.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"))
+       crumbs=[("Portfolio", "/portfolio/")], ctas=ctas("Sito web"), hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Il sito Frutta Secca Distribuzione su più dispositivi, realizzato da Pangea Studio"))
 
 # ---------------- METODO ----------------
 S.page("/metodo/", "Il metodo di lavoro | Pangea Studio",
