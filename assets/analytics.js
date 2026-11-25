@@ -19,12 +19,17 @@ document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n
 }
 function panel(){
 var p=document.createElement('aside');p.setAttribute('aria-label','Preferenze statistiche');
-p.style.cssText='position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;z-index:9999;background:#fff;color:#111;border:1px solid #ccc;border-radius:12px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.2);font:15px/1.45 system-ui,sans-serif';
-p.innerHTML='<b>Cookie e privacy</b><p style="margin:8px 0">Con il tuo consenso usiamo Google Analytics per statistiche di navigazione e clic sui contatti. La scelta dura 180 giorni. Il modulo funziona anche se rifiuti. <a href="/privacy-policy/">Informativa</a>.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" data-v="rejected" style="padding:10px 14px;border:1px solid #111;background:#fff;color:#111;border-radius:8px;cursor:pointer">Rifiuta non necessari</button><button type="button" data-v="accepted" style="padding:10px 14px;border:1px solid #111;background:#111;color:#fff;border-radius:8px;cursor:pointer">Accetta statistiche</button></div>';
+p.style.cssText='position:fixed;left:10px;bottom:10px;max-width:340px;z-index:9999;background:#fff;color:#222;border:1px solid #ddd;border-radius:10px;padding:10px 12px;box-shadow:0 2px 12px rgba(0,0,0,.12);font:13px/1.4 system-ui,sans-serif';
+var bs='padding:6px 12px;border:1px solid #222;border-radius:6px;cursor:pointer;font:inherit;background:#fff;color:#222';
+p.innerHTML='<span>Statistiche anonime con Google Analytics, solo se acconsenti. <a href="/privacy-policy/" style="color:inherit">Info</a></span><div style="display:flex;gap:8px;margin-top:8px"><button type="button" data-v="rejected" style="'+bs+'">No grazie</button><button type="button" data-v="accepted" style="'+bs+'">Ok</button></div>';
 p.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-v');if(!v)return;var was=get();set(v);p.remove();if(v==='accepted')load();else if(was==='accepted'){revoke();location.reload()}});
 document.body.appendChild(p);
 }
-function pref(){var b=document.createElement('button');b.type='button';b.textContent='Preferenze cookie';b.style.cssText='position:fixed;left:12px;bottom:12px;z-index:9998;font:13px system-ui,sans-serif;padding:6px 10px;border:1px solid #888;background:#fff;color:#111;border-radius:8px;cursor:pointer;opacity:.85';b.onclick=function(){if(!document.querySelector('aside[aria-label="Preferenze statistiche"]'))panel()};document.body.appendChild(b)}
+function pref(){
+var open=function(e){if(e)e.preventDefault();if(!document.querySelector('aside[aria-label="Preferenze statistiche"]'))panel()};
+var f=document.querySelector('footer');
+if(f){var a=document.createElement('a');a.href='#preferenze-cookie';a.textContent='Preferenze cookie';a.style.cssText='display:inline-block;margin:6px 0;font-size:13px;color:inherit;opacity:.75';a.onclick=open;f.appendChild(a)}
+}
 function init(){pref();var c=get();if(c==='accepted')load();else if(!c)panel()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
