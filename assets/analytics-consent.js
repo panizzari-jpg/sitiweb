@@ -1,6 +1,6 @@
 /* Statistiche anonime (Google Analytics 4) caricate solo dopo il consenso. */
 (function () {
-  var GA_ID = "G-P57SMB0VPZ";
+  var GA_ID = "G-WQFK7NNRJF";
   var KEY = "pl_stats_consent";
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
