@@ -179,7 +179,7 @@ def add_extra(S, ctas, service, P, D):
     S.page("/cookie/", "Cookie · Progetti Laser", "Informativa sui cookie del sito Progetti Laser.", "Informativa cookie",
            "Il sito usa solo risorse tecniche.",
            section("Cookie", '<p>Il sito non usa cookie di profilazione né strumenti di analisi o pubblicità. Può essere memorizzata la scelta del tema chiaro/scuro nel browser. '
-                   'Il modulo di preventivo è inoltrato tramite FormSubmit (formsubmit.co); per i dettagli vedi l’<a href="/privacy/">informativa privacy</a>.</p>'
+                   'Il modulo di preventivo prepara un’email nel tuo programma di posta; per i dettagli vedi l’<a href="/privacy/">informativa privacy</a>.</p>'
                    '<p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy.</p>'),
            crumbs=[("Cookie", "/cookie/")])
 

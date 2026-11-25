@@ -338,18 +338,15 @@ S.page("/come-lavoriamo/", "Come lavoriamo e file per il laser | Progetti Laser"
 
 # ---------------- PREVENTIVO ----------------
 CATS = ["Generico", "Targhette industriali", "Marcatura acciaio", "Ristorazione e locali", "Cassette in legno", "Taglieri personalizzati", "Gadget aziendali", "Nomi e regali", "Incisione su vetro", "Altro"]
-FORM = f"""<form class="f" action="https://formsubmit.co/{P['email']}" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="Richiesta preventivo · Progetti Laser">
-<input type="hidden" name="_next" value="https://{D}/grazie/"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
-<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+FORM = f"""<form class="f" data-mail="{P['email']}" data-subject="Richiesta preventivo · Progetti Laser">
 <div class="row"><label>Nome e cognome *<input name="nome" required autocomplete="name"></label><label>Azienda o locale<input name="azienda" autocomplete="organization"></label></div>
 <div class="row"><label>Email *<input type="email" name="email" required autocomplete="email"></label><label>Telefono<input type="tel" name="telefono" autocomplete="tel"></label></div>
 <div class="row"><label>Tipo di lavoro<select name="progetto" data-pre="progetto">{''.join(f'<option>{c}</option>' for c in CATS)}</select></label><label>Quantità<input name="quantita" inputmode="numeric"></label></div>
 <div class="row"><label>Materiale<select name="materiale"><option>Da definire</option><option>Legno</option><option>Metallo / acciaio</option><option>Plastica / acrilico</option><option>Vetro</option><option>Ardesia</option><option>Oggetto mio</option></select></label><label>Misure indicative<input name="misure" placeholder="es. 80 × 40 mm"></label></div>
 <label>Descrivi il lavoro *<textarea name="descrizione" required placeholder="Cosa vuoi personalizzare, testi, scadenza…"></textarea></label>
-<label>File o foto (facoltativo, max 10 MB)<input type="file" name="allegato" accept=".svg,.pdf,.ai,.eps,.dxf,.png,.jpg,.jpeg,.webp"></label>
+<p class="note">Hai un file o una foto del pezzo? Allegali all’email che si apre quando premi “Prepara l’email”.</p>
 <label class="chk"><input type="checkbox" name="privacy" required value="accettata"><span>Ho letto l’<a href="/privacy/">informativa privacy</a> e acconsento all’uso dei dati per rispondere alla richiesta. *</span></label>
-<button class="btn b1" type="submit">Invia la richiesta</button><p class="msg" role="status"></p>
+<button class="btn b1" type="submit">Prepara l’email</button><p class="msg" role="status"></p>
 <p class="note">Preferisci scrivere? Email <a href="mailto:{P['email']}">{P['email']}</a> · WhatsApp <a href="{P['wa']}">{P['tel']}</a></p>
 </form>"""
 S.page("/preventivo/", "Preventivo incisione laser | Progetti Laser",
@@ -363,7 +360,7 @@ S.page("/grazie/", "Richiesta inviata · Progetti Laser", "Richiesta ricevuta.",
 PRIV = f"""<section class="band"><div class="wrap">
 <h2>Titolare del trattamento</h2><p>{P['ragione']}, {P['via']}, {P['cap']} {P['citta']} ({P['prov']}), P. IVA {P['piva']}. Contatti: <a href="mailto:{P['email']}">{P['email']}</a>, {P['tel']}.</p>
 <h2>Dati raccolti e finalità</h2><p>Con il modulo di preventivo raccogliamo nome, contatti, descrizione del lavoro ed eventuali file allegati, solo per rispondere alla richiesta e valutare il progetto. Base giuridica: misure precontrattuali richieste dall’interessato. Non inviamo newsletter o comunicazioni promozionali.</p>
-<h2>Servizi di terze parti</h2><p>Il modulo è inoltrato tramite FormSubmit (formsubmit.co), che consegna il messaggio alla nostra casella email. Il sito è ospitato da Hostinger, che tratta i dati tecnici necessari a fornire le pagine (log del server). I caratteri tipografici sono serviti dal nostro dominio. Google Analytics 4 si attiva solo con il consenso alle statistiche, gestibile dalla pagina <a href="/cookie/">Cookie</a>; non riceve i dati dei moduli. Non usiamo cookie di profilazione pubblicitaria. Il link a WhatsApp apre il servizio del relativo fornitore, con la sua informativa.</p>
+<h2>Servizi di terze parti</h2><p>Il modulo non invia dati a servizi esterni: prepara un’email nel tuo programma di posta, che parte solo se la invii tu. Il sito è ospitato da Hostinger, che tratta i dati tecnici necessari a fornire le pagine (log del server). I caratteri tipografici sono serviti dal nostro dominio. Google Analytics 4 si attiva solo con il consenso alle statistiche, gestibile dalla pagina <a href="/cookie/">Cookie</a>; non riceve i dati dei moduli. Non usiamo cookie di profilazione pubblicitaria. Il link a WhatsApp apre il servizio del relativo fornitore, con la sua informativa.</p>
 <h2>Conservazione</h2><p>Conserviamo la corrispondenza per il tempo necessario a gestire la richiesta; i documenti amministrativi seguono gli obblighi di legge.</p>
 <h2>Diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a {P['email']}, e proporre reclamo al Garante per la protezione dei dati personali.</p>
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>"""

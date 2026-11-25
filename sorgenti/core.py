@@ -169,11 +169,14 @@ SCRIPT = r"""<script>{
 for(const b of document.querySelectorAll('.brand img')){const h=()=>b.style.display='none';if(b.complete&&!b.naturalWidth)h();b.addEventListener('error',h)}
 for(const p of document.querySelectorAll('.ph img')){const f=()=>p.parentNode.classList.add('noimg');if(p.complete&&!p.naturalWidth)f();p.addEventListener('error',f)}
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('main .band .wrap>*:not(h2), .card, .work, .steps li').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
-const live=/(^|\.)(progettilaser\.it|pangeastudio\.it)$/.test(location.hostname);
 for(const fm of document.querySelectorAll('form.f')){
  const q=new URLSearchParams(location.search),s=fm.querySelector('[data-pre]');
  if(s&&q.get(s.dataset.pre)){for(const o of s.options)if(o.value===q.get(s.dataset.pre))o.selected=true}
- if(!live)fm.addEventListener('submit',e=>{e.preventDefault();const m=fm.querySelector('.msg');m.style.display='block';m.textContent='Anteprima: l’invio è disattivato. Sul sito pubblicato il modulo arriva a pangea@pangeacomunicazione.it.'})
+ fm.addEventListener('submit',e=>{e.preventDefault();
+  const L=[];for(const el of fm.querySelectorAll('input,select,textarea')){if(!el.name||el.type==='checkbox'||el.type==='file'||!el.value.trim())continue;const lb=(el.closest('label')?.firstChild?.textContent||el.name).replace('*','').trim();L.push(lb+': '+el.value.trim())}
+  const mail=fm.dataset.mail,sub=fm.dataset.subject,m=fm.querySelector('.msg');
+  location.href='mailto:'+mail+'?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(L.join('\n')+'\n\n');
+  m.style.display='block';m.textContent='Si apre il tuo programma di posta con la richiesta già scritta: controlla e premi Invia. Se non si apre, scrivici a '+mail+'.'})
 }}</script>"""
 
 

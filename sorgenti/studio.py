@@ -389,16 +389,13 @@ S.page("/metodo/", "Il metodo di lavoro | Pangea Studio",
 
 # ---------------- CONTATTI ----------------
 SERV = ["Sito web", "Sito per cantina", "Sito per ristorante", "SEO", "Social media", "Fotografia", "Altro"]
-FORM = f"""<form class="f" id="richiesta" action="https://formsubmit.co/{P['email']}" method="POST">
-<input type="hidden" name="_subject" value="Nuova richiesta · Pangea Studio">
-<input type="hidden" name="_next" value="https://{D}/grazie/"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
-<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+FORM = f"""<form class="f" id="richiesta" data-mail="{P['email']}" data-subject="Nuova richiesta · Pangea Studio">
 <div class="row"><label>Nome e cognome *<input name="nome" required autocomplete="name"></label><label>Attività<input name="attivita" autocomplete="organization"></label></div>
 <div class="row"><label>Email *<input type="email" name="email" required autocomplete="email"></label><label>Telefono<input type="tel" name="telefono" autocomplete="tel"></label></div>
 <div class="row"><label>Servizio<select name="servizio" data-pre="servizio">{''.join(f'<option>{c}</option>' for c in SERV)}</select></label><label>Sito attuale (se c’è)<input name="sito" type="text" inputmode="url" placeholder="www.tuosito.it"></label></div>
 <label>Raccontaci il progetto *<textarea name="messaggio" required placeholder="Cosa fai, cosa vuoi migliorare, zona servita…"></textarea></label>
 <label class="chk"><input type="checkbox" name="privacy" required value="accettata"><span>Ho letto l’<a href="/privacy-policy/">informativa privacy</a> e acconsento all’uso dei dati per rispondere alla richiesta. *</span></label>
-<button class="btn b1" type="submit">Invia la richiesta</button><p class="msg" role="status"></p>
+<button class="btn b1" type="submit">Prepara l’email</button><p class="msg" role="status"></p>
 </form>"""
 S.page("/contatti/", "Contatti | Pangea Studio, Santa Maria della Versa (PV)",
        "Contatta Pangea Studio: telefono 0385 320302, WhatsApp, email o modulo. Via XXV Aprile, 7, Santa Maria della Versa (PV).",
@@ -412,7 +409,7 @@ S.page("/grazie/", "Richiesta inviata · Pangea Studio", "Richiesta ricevuta.", 
 PRIV = f"""<section class="band"><div class="wrap">
 <h2>Titolare del trattamento</h2><p>{P['ragione']}, {P['via']}, {P['cap']} {P['citta']} ({P['prov']}), P. IVA {P['piva']}. Contatti: <a href="mailto:{P['email']}">{P['email']}</a>, {P['tel']}.</p>
 <h2>Dati raccolti e finalità</h2><p>Con il modulo raccogliamo nome, contatti, attività, sito attuale e messaggio, solo per rispondere e preparare un preventivo. Base giuridica: misure precontrattuali richieste dall’interessato. Nessuna newsletter.</p>
-<h2>Servizi di terze parti</h2><p>Il modulo è inoltrato tramite FormSubmit (formsubmit.co) alla nostra casella email. Il sito è ospitato da Hostinger (log tecnici del server). Le anteprime del portfolio sono caricate dal servizio mShots di WordPress.com, che riceve l’indirizzo IP del visitatore. Google Analytics 4 si attiva solo con il consenso alle statistiche; non usiamo cookie di profilazione pubblicitaria; i link a WhatsApp e Instagram aprono servizi con informative proprie.</p>
+<h2>Servizi di terze parti</h2><p>Il modulo non invia dati a servizi esterni: prepara un’email nel tuo programma di posta, che parte solo se la invii tu. Il sito è ospitato da Hostinger (log tecnici del server). Le anteprime del portfolio sono caricate dal servizio mShots di WordPress.com, che riceve l’indirizzo IP del visitatore. Google Analytics 4 si attiva solo con il consenso alle statistiche; non usiamo cookie di profilazione pubblicitaria; i link a WhatsApp e Instagram aprono servizi con informative proprie.</p>
 <h2>Conservazione e diritti</h2><p>Conserviamo la corrispondenza per il tempo necessario alla richiesta. Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a {P['email']} e proporre reclamo al Garante privacy.</p>
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>"""
 S.page("/privacy-policy/", "Privacy e cookie | Pangea Studio", "Informativa privacy e cookie di Pangea Studio: titolare, dati del modulo, servizi terzi, conservazione e diritti.", "Privacy e cookie", "Come trattiamo i dati inviati tramite il sito.", PRIV, crumbs=[("Privacy", "/privacy-policy/")], hero_img=("/portfolio/sito-web-frutta-secca-distribuzione-pangea-studio.webp", "Sito web realizzato da Pangea Studio su più dispositivi"))
