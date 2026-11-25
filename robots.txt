@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://progettilaser.it/sitemap.xml
+Sitemap: https://progettilaser.it/sitemap-video.xml
