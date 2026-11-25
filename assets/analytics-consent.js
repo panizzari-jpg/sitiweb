@@ -16,6 +16,16 @@
     s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
     document.head.appendChild(s);
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a[href]");
+      if (!a) return;
+      var h = a.getAttribute("href") || "";
+      var m = h.indexOf("tel:") === 0 ? "telefono" : h.indexOf("mailto:") === 0 ? "email" : /^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(h) ? "whatsapp" : null;
+      if (m) gtag("event", "contact_click", { contact_method: m, page_path: location.pathname });
+    });
+    document.addEventListener("submit", function (e) {
+      if (e.target && e.target.matches && e.target.matches("form.f")) gtag("event", "generate_lead", { form_name: "preventivo", page_path: location.pathname });
+    }, true);
   }
   function removeBanner() { var b = document.getElementById("pl-consent"); if (b) b.remove(); }
   function banner() {
