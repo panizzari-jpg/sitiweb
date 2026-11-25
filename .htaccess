@@ -42,3 +42,13 @@ Redirect 301 /video/targhe-pannelli-legno/ https://progettilaser.it/targhe-panne
 Redirect 301 /video/gadget-aziendali-personalizzati/ https://progettilaser.it/gadget-aziendali-personalizzati/
 Redirect 301 /video/cerimonie-matrimoni-personalizzati/ https://progettilaser.it/cerimonie-matrimoni-personalizzati/
 Redirect 301 /video/targhette-industriali-laser/ https://progettilaser.it/targhette-industriali-laser/
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
