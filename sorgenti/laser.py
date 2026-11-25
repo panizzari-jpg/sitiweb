@@ -132,7 +132,7 @@ t_faq = [
     ("Le targhette sono certificate?", "No. Incidiamo i contenuti che ci fornisci: le informazioni richieste da norme e marcature restano a cura del costruttore."),
     ("Posso inviarvi un disegno tecnico?", "Sì: misure, posizione dei fori e testi definitivi in PDF, DXF o SVG accelerano la verifica."),
 ]
-S.page("/targhette-industriali-laser/", "Targhette industriali con matricola al laser | Progetti Laser",
+S.page("/targhette-industriali-laser/", "Targhette industriali al laser con matricola e QR | Progetti Laser",
        "Targhette per macchinari incise al laser su plastica e metallo: logo, modello, matricola, numero di serie, codice e QR, con dati variabili per ogni pezzo.",
        "Targhette industriali incise al laser con matricola e dati variabili",
        "Per costruttori e officine che devono identificare macchinari e apparecchiature: incidiamo logo, modello, matricola, numero di serie, codici e QR su targhette in plastica o metallo, con dati diversi per ogni pezzo.",
@@ -290,11 +290,12 @@ v_faq = [
     ("Ogni forma si può incidere?", "Non tutti gli oggetti hanno la stessa geometria: ogni nuovo formato richiede una verifica specifica prima della conferma."),
     ("Per una serie con testi diversi?", "Raccogliamo disegno, numero di pezzi ed elenco dei testi variabili prima della produzione."),
 ]
-S.page("/incisione-vetro-personalizzata/", "Incisione laser su vetro e bottiglie | Progetti Laser",
-       "Incisione laser su bottiglie e oggetti in vetro: marchi, dediche e decorazioni per regali e serie personalizzate. Verifica del formato prima della conferma.",
-       "Incisione laser su vetro e bottiglie",
+S.page("/incisione-vetro-personalizzata/", "Marcatura laser su bottiglie e incisione su vetro | Progetti Laser",
+       "Marcatura e incisione laser su bottiglie e oggetti in vetro: marchi, dediche e decorazioni per regali, locali e serie personalizzate. Verifica del formato prima della conferma.",
+       "Marcatura laser su bottiglie e incisione su vetro",
        "Incidiamo marchi, dediche e decorazioni su bottiglie e oggetti in vetro, per regali e serie personalizzate. La leggibilità dipende dalla luce che attraversa il vetro e dalla posizione del decoro.",
        section("Come valutiamo un oggetto in vetro", '<div class="two"><div><ul class="list"><li>Forma dell’oggetto e area raggiungibile</li><li>Spessore e caratteristiche del vetro</li><li>Posizione del decoro rispetto alla luce</li><li>Dimensione minima dei testi</li></ul></div><div>' + works([dict(img=I + "bottiglia-vetro-incisa-laser-vintage.webp", alt="Bottiglia in vetro con chiusura meccanica e decorazione Vintage Design incisa", tag="Ambientazione illustrativa", title="Bottiglia Vintage Design", text="Scritte e motivi ornamentali su bottiglia con tappo meccanico.", href="/lavori/bottiglia-vetro-incisa/")]) + '</div></div>') +
+       section("Cosa ci serve per valutare una bottiglia", '<ul class="list"><li>Una foto della bottiglia e le dimensioni dell’area da marcare</li><li>Il marchio o il testo, meglio in file vettoriale</li><li>La quantità e l’uso previsto: regalo, serie per un locale o per un’azienda</li></ul><p>Prima di confermare verifichiamo il formato e ti diciamo cosa si può ottenere sul tuo vetro.</p>') +
        section("Domande frequenti", faq(v_faq), alt=True),
        hero_img=(I+"bottiglia-vetro-incisa-laser-vintage.webp","Bottiglia in vetro con decorazione Vintage Design incisa"), ctas=ctas("Incisione su vetro"), crumbs=[("Incisione su vetro", "/incisione-vetro-personalizzata/")],
        schema=[service("Incisione laser su vetro", "/incisione-vetro-personalizzata/", "Incisione di marchi, dediche e decori su bottiglie e oggetti in vetro."), faq_schema(v_faq)])

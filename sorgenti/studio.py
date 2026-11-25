@@ -229,11 +229,11 @@ seo_faq = [
     ("Garantite la prima pagina su Google?", "No, e diffida di chi lo fa. Misuriamo impressioni, clic e richieste prima e dopo ogni intervento."),
     ("Come valutate i risultati?", "Dopo la pubblicazione controlliamo lo stato delle pagine e confrontiamo impressioni e clic nel tempo, insieme alle richieste ricevute."),
 ]
-S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
-       "Audit SEO con Search Console per attività in provincia di Pavia: indicizzazione, ricerche reali, SEO locale e interventi in ordine di priorità.",
-       "Consulenza SEO per attività della provincia di Pavia",
+S.page("/seo/", "Consulente SEO a Pavia: audit e SEO locale | Pangea Studio",
+       "Consulente SEO a Pavia e in Oltrepò: audit con Search Console, SEO locale e interventi in ordine di priorità per aziende, cantine e ristoranti della provincia.",
+       "Consulente SEO a Pavia e in Oltrepò Pavese",
        "Analizziamo come Google legge il tuo sito e quali pagine trovano i clienti, poi ti consegniamo una lista di interventi in ordine di priorità e i controlli da ripetere dopo ogni modifica.",
-       section("Perché la SEO locale conta", '<div class="cols2"><p>Per un’attività che lavora in una zona precisa, farsi trovare da chi cerca il servizio nelle vicinanze vale più di qualsiasi visita generica. Significa avere pagine chiare per ogni servizio, informazioni coerenti su sede e area servita, e un sito che Google riesce a leggere senza errori.</p><p>Non promettiamo posizioni: nessuno può farlo seriamente. Lavoriamo sui dati reali di Search Console, interveniamo sulle pagine che hanno già impressioni e misuriamo prima e dopo, così sai cosa ha funzionato.</p></div>') +
+       section("Perché la SEO locale conta", '<div class="cols2"><p>Per un’attività che lavora in una zona precisa, farsi trovare da chi cerca il servizio nelle vicinanze vale più di qualsiasi visita generica. Se cerchi una consulenza SEO a Pavia o in Oltrepò, si parte da un audit del sito che hai già. Significa avere pagine chiare per ogni servizio, informazioni coerenti su sede e area servita, e un sito che Google riesce a leggere senza errori.</p><p>Non promettiamo posizioni: nessuno può farlo seriamente. Lavoriamo sui dati reali di Search Console, interveniamo sulle pagine che hanno già impressioni e misuriamo prima e dopo, così sai cosa ha funzionato.</p></div>') +
        section("Cosa controlliamo", steps([
            ("Indicizzazione e struttura", "Pagine leggibili da Google, risposte del server, sitemap, canonical e redirect; errori, duplicati e pagine importanti difficili da raggiungere."),
            ("Ricerche e contenuti", "Con Search Console: ricerche, impressioni e clic; titoli, testi e collegamenti interni rivisti su ciò che le persone cercano."),
@@ -244,7 +244,7 @@ S.page("/seo/", "Consulenza SEO a Pavia e in Oltrepò | Pangea Studio",
        section("Cosa ricevi", '<div class="two"><div><ul class="list"><li>Lista di interventi ordinata per priorità</li><li>Controlli da ripetere dopo le modifiche</li><li>Elenco delle attività da preventivare, sul sito attuale o su un nuovo progetto</li></ul></div><div><p>Lavoriamo per attività che servono una zona precisa: Oltrepò Pavese, Pavia e provincia. Per chi deve rifare il sito, l’audit è il primo passo per non perdere le visite già conquistate.</p><p><a href="/siti-web/">Restyling senza perdere visibilità →</a></p></div></div>', alt=True) +
        section("Domande frequenti", faq(seo_faq)),
        hero_img=("/photography/fotografia-dettaglio-marchio-ballabio.webp", "Dettaglio del marchio Ballabio sulla confezione"), ctas=ctas("SEO"), crumbs=[("SEO", "/seo/")],
-       schema=[service("Consulenza SEO", "/seo/", "Audit di indicizzazione, Search Console, contenuti e SEO locale."), faq_schema(seo_faq)])
+       schema=[service("Consulenza SEO a Pavia", "/seo/", "Audit di indicizzazione, Search Console, contenuti e SEO locale."), faq_schema(seo_faq)])
 
 # ---------------- SOCIAL ----------------
 so_faq = [
