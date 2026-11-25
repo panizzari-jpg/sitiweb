@@ -56,5 +56,5 @@ for(const fm of document.querySelectorAll('form.f')){
  if(s&&q.get(s.dataset.pre)){for(const o of s.options)if(o.value===q.get(s.dataset.pre))o.selected=true}
  if(!live)fm.addEventListener('submit',e=>{e.preventDefault();const m=fm.querySelector('.msg');m.style.display='block';m.textContent='Anteprima: l’invio è disattivato. Sul sito pubblicato il modulo arriva a pangea@pangeacomunicazione.it.'})
 }}</script>
-</body>
+<script src="/assets/analytics.js" defer></script></body>
 </html>
