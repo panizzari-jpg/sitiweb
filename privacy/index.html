@@ -26,7 +26,7 @@
 <section class="band"><div class="wrap">
 <h2>Titolare del trattamento</h2><p>Pangea Comunicazione, Via XXV Aprile, 7, 27047 Santa Maria della Versa (PV), P. IVA 02772420184. Contatti: <a href="mailto:pangea@pangeacomunicazione.it">pangea@pangeacomunicazione.it</a>, 0385 320302.</p>
 <h2>Dati raccolti e finalità</h2><p>Con il modulo di preventivo raccogliamo nome, contatti, descrizione del lavoro ed eventuali file allegati, solo per rispondere alla richiesta e valutare il progetto. Base giuridica: misure precontrattuali richieste dall’interessato. Non inviamo newsletter o comunicazioni promozionali.</p>
-<h2>Servizi di terze parti</h2><p>Il modulo è inoltrato tramite FormSubmit (formsubmit.co), che consegna il messaggio alla nostra casella email. Il sito è ospitato da Hostinger, che tratta i dati tecnici necessari a fornire le pagine (log del server). I caratteri tipografici sono serviti dal nostro dominio. Google Analytics 4 si attiva solo con il consenso alle statistiche, gestibile dalla pagina <a href="/cookie/">Cookie</a>; non riceve i dati dei moduli. Non usiamo cookie di profilazione pubblicitaria. Il link a WhatsApp apre il servizio del relativo fornitore, con la sua informativa.</p>
+<h2>Servizi di terze parti</h2><p>Il modulo non invia dati a servizi esterni: prepara un’email nel tuo programma di posta, che parte solo se la invii tu. Il sito è ospitato da Hostinger, che tratta i dati tecnici necessari a fornire le pagine (log del server). I caratteri tipografici sono serviti dal nostro dominio. Google Analytics 4 si attiva solo con il consenso alle statistiche, gestibile dalla pagina <a href="/cookie/">Cookie</a>; non riceve i dati dei moduli. Non usiamo cookie di profilazione pubblicitaria. Il link a WhatsApp apre il servizio del relativo fornitore, con la sua informativa.</p>
 <h2>Conservazione</h2><p>Conserviamo la corrispondenza per il tempo necessario a gestire la richiesta; i documenti amministrativi seguono gli obblighi di legge.</p>
 <h2>Diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a pangea@pangeacomunicazione.it, e proporre reclamo al Garante per la protezione dei dati personali.</p>
 <p class="note">Aggiornata il 24/11/2026 · testo da validare con il consulente privacy prima della pubblicazione.</p></div></section>
@@ -47,11 +47,14 @@
 for(const b of document.querySelectorAll('.brand img')){const h=()=>b.style.display='none';if(b.complete&&!b.naturalWidth)h();b.addEventListener('error',h)}
 for(const p of document.querySelectorAll('.ph img')){const f=()=>p.parentNode.classList.add('noimg');if(p.complete&&!p.naturalWidth)f();p.addEventListener('error',f)}
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('main .band .wrap>*:not(h2), .card, .work, .steps li').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
-const live=/(^|\.)(progettilaser\.it|pangeastudio\.it)$/.test(location.hostname);
 for(const fm of document.querySelectorAll('form.f')){
  const q=new URLSearchParams(location.search),s=fm.querySelector('[data-pre]');
  if(s&&q.get(s.dataset.pre)){for(const o of s.options)if(o.value===q.get(s.dataset.pre))o.selected=true}
- if(!live)fm.addEventListener('submit',e=>{e.preventDefault();const m=fm.querySelector('.msg');m.style.display='block';m.textContent='Anteprima: l’invio è disattivato. Sul sito pubblicato il modulo arriva a pangea@pangeacomunicazione.it.'})
+ fm.addEventListener('submit',e=>{e.preventDefault();
+  const L=[];for(const el of fm.querySelectorAll('input,select,textarea')){if(!el.name||el.type==='checkbox'||el.type==='file'||!el.value.trim())continue;const lb=(el.closest('label')?.firstChild?.textContent||el.name).replace('*','').trim();L.push(lb+': '+el.value.trim())}
+  const mail=fm.dataset.mail,sub=fm.dataset.subject,m=fm.querySelector('.msg');
+  location.href='mailto:'+mail+'?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(L.join('\n')+'\n\n');
+  m.style.display='block';m.textContent='Si apre il tuo programma di posta con la richiesta già scritta: controlla e premi Invia. Se non si apre, scrivici a '+mail+'.'})
 }}</script>
 </body>
 </html>
