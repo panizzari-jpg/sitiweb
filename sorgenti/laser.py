@@ -291,7 +291,7 @@ v_faq = [
     ("Per una serie con testi diversi?", "Raccogliamo disegno, numero di pezzi ed elenco dei testi variabili prima della produzione."),
 ]
 S.page("/incisione-vetro-personalizzata/", "Marcatura laser su bottiglie e incisione su vetro | Progetti Laser",
-       "Marcatura e incisione laser su bottiglie e oggetti in vetro: marchi, dediche e decorazioni per regali, locali e serie personalizzate. Verifica del formato prima della conferma.",
+       "Marcatura e incisione laser su bottiglie e oggetti in vetro: marchi, dediche e decorazioni per regali, locali e serie. Verifica del formato prima della conferma.",
        "Marcatura laser su bottiglie e incisione su vetro",
        "Incidiamo marchi, dediche e decorazioni su bottiglie e oggetti in vetro, per regali e serie personalizzate. La leggibilità dipende dalla luce che attraversa il vetro e dalla posizione del decoro.",
        section("Come valutiamo un oggetto in vetro", '<div class="two"><div><ul class="list"><li>Forma dell’oggetto e area raggiungibile</li><li>Spessore e caratteristiche del vetro</li><li>Posizione del decoro rispetto alla luce</li><li>Dimensione minima dei testi</li></ul></div><div>' + works([dict(img=I + "bottiglia-vetro-incisa-laser-vintage.webp", alt="Bottiglia in vetro con chiusura meccanica e decorazione Vintage Design incisa", tag="Ambientazione illustrativa", title="Bottiglia Vintage Design", text="Scritte e motivi ornamentali su bottiglia con tappo meccanico.", href="/lavori/bottiglia-vetro-incisa/")]) + '</div></div>') +
